@@ -8,6 +8,13 @@
 <%= gravatar_for @user %>
 <%= @user.name %>
 
+<% unless @user.events.empty? %>
+<table class="microposts" summary="User microposts">
+<%= render @events %>
+</table>
+<%= will_paginate @events %>
+<% end %>
+
 
 </td>
 <td class="sidebar round">
