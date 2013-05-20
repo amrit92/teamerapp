@@ -23,10 +23,10 @@ def has_password?(submitted_password)
 	encrypted_password == encrypt(submitted_password)
 end
 
-	def feed
+	#def feed
 # This is preliminary. See Chapter 12 for the full implementation.
-Micropost.where("user_id = ?", id)
-end
+#Micropost.where("user_id = ?", id)
+#end
 private
 	def encrypt_password
 		self.salt = make_salt if new_record?
