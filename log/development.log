@@ -3526,3 +3526,747 @@ Served asset /application.js - 304 Not Modified (1ms)
 
 Started GET "/assets/blueprint/print.css?body=1" for 127.0.0.1 at 2013-05-20 15:27:06 +0530
 Served asset /blueprint/print.css - 304 Not Modified (0ms)
+Connecting to database specified by database.yml
+
+
+Started GET "/users/1" for 127.0.0.1 at 2013-05-20 15:43:25 +0530
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  Rendered users/show.html.erb within layouts/application (2.4ms)
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 72ms (Views: 64.2ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-05-20 15:43:25 +0530
+Served asset /jquery.js - 304 Not Modified (22ms)
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2013-05-20 15:43:25 +0530
+Served asset /home.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/blueprint/screen.css?body=1" for 127.0.0.1 at 2013-05-20 15:43:25 +0530
+Served asset /blueprint/screen.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/about.js?body=1" for 127.0.0.1 at 2013-05-20 15:43:25 +0530
+Served asset /about.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/custom.css?body=1" for 127.0.0.1 at 2013-05-20 15:43:25 +0530
+Served asset /custom.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/pages.js?body=1" for 127.0.0.1 at 2013-05-20 15:43:25 +0530
+Served asset /pages.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/posts.js?body=1" for 127.0.0.1 at 2013-05-20 15:43:25 +0530
+Served asset /posts.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2013-05-20 15:43:25 +0530
+Served asset /sessions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/rails.js?body=1" for 127.0.0.1 at 2013-05-20 15:43:25 +0530
+Served asset /rails.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/temp.js?body=1" for 127.0.0.1 at 2013-05-20 15:43:25 +0530
+Served asset /temp.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-05-20 15:43:25 +0530
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-05-20 15:43:25 +0530
+Served asset /application.js - 304 Not Modified (11ms)
+
+
+Started GET "/assets/blueprint/print.css?body=1" for 127.0.0.1 at 2013-05-20 15:43:26 +0530
+Served asset /blueprint/print.css - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-05-20 15:48:32 +0530
+Processing by PagesController#home as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1[0m
+  Rendered shared/_user_info.html.erb (1.2ms)
+  Rendered pages/home.html.erb within layouts/application (3.9ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 41ms (Views: 39.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-05-20 15:48:32 +0530
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2013-05-20 15:48:32 +0530
+Served asset /home.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/blueprint/screen.css?body=1" for 127.0.0.1 at 2013-05-20 15:48:32 +0530
+Served asset /blueprint/screen.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/custom.css?body=1" for 127.0.0.1 at 2013-05-20 15:48:32 +0530
+Served asset /custom.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/about.js?body=1" for 127.0.0.1 at 2013-05-20 15:48:32 +0530
+Served asset /about.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/pages.js?body=1" for 127.0.0.1 at 2013-05-20 15:48:32 +0530
+Served asset /pages.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/posts.js?body=1" for 127.0.0.1 at 2013-05-20 15:48:32 +0530
+Served asset /posts.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/rails.js?body=1" for 127.0.0.1 at 2013-05-20 15:48:32 +0530
+Served asset /rails.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2013-05-20 15:48:32 +0530
+Served asset /sessions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/temp.js?body=1" for 127.0.0.1 at 2013-05-20 15:48:32 +0530
+Served asset /temp.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-05-20 15:48:32 +0530
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-05-20 15:48:32 +0530
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/blueprint/print.css?body=1" for 127.0.0.1 at 2013-05-20 15:48:32 +0530
+Served asset /blueprint/print.css - 304 Not Modified (0ms)
+
+
+Started GET "/users/2" for 127.0.0.1 at 2013-05-20 15:48:33 +0530
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", "2"]]
+  Rendered users/show.html.erb within layouts/application (1.1ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1[0m
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 43ms (Views: 41.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-05-20 15:48:33 +0530
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/blueprint/screen.css?body=1" for 127.0.0.1 at 2013-05-20 15:48:33 +0530
+Served asset /blueprint/screen.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/about.js?body=1" for 127.0.0.1 at 2013-05-20 15:48:33 +0530
+Served asset /about.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/custom.css?body=1" for 127.0.0.1 at 2013-05-20 15:48:33 +0530
+Served asset /custom.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2013-05-20 15:48:33 +0530
+Served asset /home.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/pages.js?body=1" for 127.0.0.1 at 2013-05-20 15:48:33 +0530
+Served asset /pages.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/posts.js?body=1" for 127.0.0.1 at 2013-05-20 15:48:33 +0530
+Served asset /posts.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/rails.js?body=1" for 127.0.0.1 at 2013-05-20 15:48:33 +0530
+Served asset /rails.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2013-05-20 15:48:33 +0530
+Served asset /sessions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/temp.js?body=1" for 127.0.0.1 at 2013-05-20 15:48:33 +0530
+Served asset /temp.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-05-20 15:48:33 +0530
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-05-20 15:48:33 +0530
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/blueprint/print.css?body=1" for 127.0.0.1 at 2013-05-20 15:48:34 +0530
+Served asset /blueprint/print.css - 304 Not Modified (0ms)
+
+
+Started GET "/users/2" for 127.0.0.1 at 2013-05-20 15:55:47 +0530
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", "2"]]
+  Rendered users/show.html.erb within layouts/application (0.9ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1[0m
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 43ms (Views: 41.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-05-20 15:55:47 +0530
+Served asset /jquery.js - 304 Not Modified (4ms)
+
+
+Started GET "/assets/blueprint/screen.css?body=1" for 127.0.0.1 at 2013-05-20 15:55:47 +0530
+Served asset /blueprint/screen.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/pages.js?body=1" for 127.0.0.1 at 2013-05-20 15:55:47 +0530
+Served asset /pages.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2013-05-20 15:55:47 +0530
+Served asset /home.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/posts.js?body=1" for 127.0.0.1 at 2013-05-20 15:55:47 +0530
+Served asset /posts.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/about.js?body=1" for 127.0.0.1 at 2013-05-20 15:55:47 +0530
+Served asset /about.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/custom.css?body=1" for 127.0.0.1 at 2013-05-20 15:55:47 +0530
+Served asset /custom.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/rails.js?body=1" for 127.0.0.1 at 2013-05-20 15:55:47 +0530
+Served asset /rails.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2013-05-20 15:55:47 +0530
+Served asset /sessions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/temp.js?body=1" for 127.0.0.1 at 2013-05-20 15:55:47 +0530
+Served asset /temp.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-05-20 15:55:47 +0530
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-05-20 15:55:47 +0530
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/blueprint/print.css?body=1" for 127.0.0.1 at 2013-05-20 15:55:47 +0530
+Served asset /blueprint/print.css - 304 Not Modified (0ms)
+
+
+Started GET "/users/2" for 127.0.0.1 at 2013-05-20 15:55:49 +0530
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", "2"]]
+  Rendered users/show.html.erb within layouts/application (0.8ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1[0m
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 42ms (Views: 40.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-05-20 15:55:49 +0530
+Served asset /jquery.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/about.js?body=1" for 127.0.0.1 at 2013-05-20 15:55:49 +0530
+Served asset /about.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/posts.js?body=1" for 127.0.0.1 at 2013-05-20 15:55:49 +0530
+Served asset /posts.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/pages.js?body=1" for 127.0.0.1 at 2013-05-20 15:55:49 +0530
+Served asset /pages.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2013-05-20 15:55:49 +0530
+Served asset /home.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/custom.css?body=1" for 127.0.0.1 at 2013-05-20 15:55:49 +0530
+Served asset /custom.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/blueprint/screen.css?body=1" for 127.0.0.1 at 2013-05-20 15:55:49 +0530
+Served asset /blueprint/screen.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/rails.js?body=1" for 127.0.0.1 at 2013-05-20 15:55:49 +0530
+Served asset /rails.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2013-05-20 15:55:49 +0530
+Served asset /sessions.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/temp.js?body=1" for 127.0.0.1 at 2013-05-20 15:55:49 +0530
+Served asset /temp.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-05-20 15:55:49 +0530
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-05-20 15:55:49 +0530
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/blueprint/print.css?body=1" for 127.0.0.1 at 2013-05-20 15:55:49 +0530
+Served asset /blueprint/print.css - 304 Not Modified (0ms)
+
+
+Started GET "/users/2" for 127.0.0.1 at 2013-05-20 15:57:04 +0530
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", "2"]]
+  Rendered users/show.html.erb within layouts/application (1.7ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1[0m
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 41ms (Views: 39.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-05-20 15:57:04 +0530
+Served asset /jquery.js - 304 Not Modified (4ms)
+
+
+Started GET "/assets/rails.js?body=1" for 127.0.0.1 at 2013-05-20 15:57:04 +0530
+Served asset /rails.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/pages.js?body=1" for 127.0.0.1 at 2013-05-20 15:57:04 +0530
+Served asset /pages.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2013-05-20 15:57:04 +0530
+Served asset /home.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/posts.js?body=1" for 127.0.0.1 at 2013-05-20 15:57:04 +0530
+Served asset /posts.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/about.js?body=1" for 127.0.0.1 at 2013-05-20 15:57:04 +0530
+Served asset /about.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/blueprint/screen.css?body=1" for 127.0.0.1 at 2013-05-20 15:57:04 +0530
+Served asset /blueprint/screen.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/custom.css?body=1" for 127.0.0.1 at 2013-05-20 15:57:04 +0530
+Served asset /custom.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2013-05-20 15:57:04 +0530
+Served asset /sessions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/temp.js?body=1" for 127.0.0.1 at 2013-05-20 15:57:04 +0530
+Served asset /temp.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-05-20 15:57:04 +0530
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-05-20 15:57:04 +0530
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/blueprint/print.css?body=1" for 127.0.0.1 at 2013-05-20 15:57:04 +0530
+Served asset /blueprint/print.css - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-05-20 15:57:07 +0530
+Processing by PagesController#home as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1
+  Rendered shared/_user_info.html.erb (0.6ms)
+  Rendered pages/home.html.erb within layouts/application (2.2ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 39ms (Views: 38.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/blueprint/screen.css?body=1" for 127.0.0.1 at 2013-05-20 15:57:07 +0530
+Served asset /blueprint/screen.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-05-20 15:57:07 +0530
+Served asset /jquery.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/custom.css?body=1" for 127.0.0.1 at 2013-05-20 15:57:07 +0530
+Served asset /custom.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/about.js?body=1" for 127.0.0.1 at 2013-05-20 15:57:07 +0530
+Served asset /about.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2013-05-20 15:57:07 +0530
+Served asset /home.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/pages.js?body=1" for 127.0.0.1 at 2013-05-20 15:57:07 +0530
+Served asset /pages.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/posts.js?body=1" for 127.0.0.1 at 2013-05-20 15:57:07 +0530
+Served asset /posts.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/rails.js?body=1" for 127.0.0.1 at 2013-05-20 15:57:07 +0530
+Served asset /rails.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2013-05-20 15:57:07 +0530
+Served asset /sessions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/temp.js?body=1" for 127.0.0.1 at 2013-05-20 15:57:07 +0530
+Served asset /temp.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-05-20 15:57:07 +0530
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-05-20 15:57:07 +0530
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/blueprint/print.css?body=1" for 127.0.0.1 at 2013-05-20 15:57:07 +0530
+Served asset /blueprint/print.css - 304 Not Modified (0ms)
+Connecting to database specified by database.yml
+
+
+Started GET "/" for 127.0.0.1 at 2013-05-20 16:02:44 +0530
+Processing by PagesController#home as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1[0m
+  Rendered shared/_user_info.html.erb (0.6ms)
+  Rendered pages/home.html.erb within layouts/application (5.7ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 91ms (Views: 64.6ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-05-20 16:02:44 +0530
+Served asset /jquery.js - 304 Not Modified (24ms)
+
+
+Started GET "/assets/blueprint/screen.css?body=1" for 127.0.0.1 at 2013-05-20 16:02:44 +0530
+Served asset /blueprint/screen.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/about.js?body=1" for 127.0.0.1 at 2013-05-20 16:02:44 +0530
+Served asset /about.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/custom.css?body=1" for 127.0.0.1 at 2013-05-20 16:02:44 +0530
+Served asset /custom.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2013-05-20 16:02:44 +0530
+Served asset /home.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/pages.js?body=1" for 127.0.0.1 at 2013-05-20 16:02:44 +0530
+Served asset /pages.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/posts.js?body=1" for 127.0.0.1 at 2013-05-20 16:02:44 +0530
+Served asset /posts.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/rails.js?body=1" for 127.0.0.1 at 2013-05-20 16:02:44 +0530
+Served asset /rails.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/temp.js?body=1" for 127.0.0.1 at 2013-05-20 16:02:44 +0530
+Served asset /temp.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2013-05-20 16:02:44 +0530
+Served asset /sessions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-05-20 16:02:44 +0530
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-05-20 16:02:44 +0530
+Served asset /application.js - 304 Not Modified (7ms)
+
+
+Started GET "/assets/blueprint/print.css?body=1" for 127.0.0.1 at 2013-05-20 16:02:45 +0530
+Served asset /blueprint/print.css - 304 Not Modified (1ms)
+Connecting to database specified by database.yml
+
+
+Started GET "/" for 127.0.0.1 at 2013-05-20 16:06:12 +0530
+Processing by PagesController#home as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1[0m
+  Rendered shared/_user_info.html.erb (0.7ms)
+  Rendered pages/home.html.erb within layouts/application (6.1ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 88ms (Views: 65.7ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-05-20 16:06:12 +0530
+Served asset /jquery.js - 304 Not Modified (29ms)
+
+
+Started GET "/assets/custom.css?body=1" for 127.0.0.1 at 2013-05-20 16:06:12 +0530
+Served asset /custom.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/blueprint/screen.css?body=1" for 127.0.0.1 at 2013-05-20 16:06:12 +0530
+Served asset /blueprint/screen.css - 304 Not Modified (4ms)
+
+
+Started GET "/assets/about.js?body=1" for 127.0.0.1 at 2013-05-20 16:06:12 +0530
+Served asset /about.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/pages.js?body=1" for 127.0.0.1 at 2013-05-20 16:06:12 +0530
+Served asset /pages.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2013-05-20 16:06:12 +0530
+Served asset /home.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/posts.js?body=1" for 127.0.0.1 at 2013-05-20 16:06:12 +0530
+Served asset /posts.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/rails.js?body=1" for 127.0.0.1 at 2013-05-20 16:06:12 +0530
+Served asset /rails.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2013-05-20 16:06:12 +0530
+Served asset /sessions.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/temp.js?body=1" for 127.0.0.1 at 2013-05-20 16:06:12 +0530
+Served asset /temp.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-05-20 16:06:12 +0530
+Served asset /users.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-05-20 16:06:12 +0530
+Served asset /application.js - 304 Not Modified (11ms)
+
+
+Started GET "/assets/blueprint/print.css?body=1" for 127.0.0.1 at 2013-05-20 16:06:12 +0530
+Served asset /blueprint/print.css - 304 Not Modified (0ms)
+
+
+Started GET "/users/2/edit" for 127.0.0.1 at 2013-05-20 16:06:14 +0530
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", "2"]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", "2"]]
+  Rendered shared/_error_messages.html.erb (0.3ms)
+  Rendered users/edit.html.erb within layouts/application (111.2ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 150ms (Views: 147.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-05-20 16:06:14 +0530
+Served asset /jquery.js - 304 Not Modified (11ms)
+
+
+Started GET "/assets/custom.css?body=1" for 127.0.0.1 at 2013-05-20 16:06:14 +0530
+Served asset /custom.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/blueprint/screen.css?body=1" for 127.0.0.1 at 2013-05-20 16:06:14 +0530
+Served asset /blueprint/screen.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/about.js?body=1" for 127.0.0.1 at 2013-05-20 16:06:14 +0530
+Served asset /about.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/pages.js?body=1" for 127.0.0.1 at 2013-05-20 16:06:14 +0530
+Served asset /pages.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2013-05-20 16:06:14 +0530
+Served asset /home.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/posts.js?body=1" for 127.0.0.1 at 2013-05-20 16:06:14 +0530
+Served asset /posts.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/rails.js?body=1" for 127.0.0.1 at 2013-05-20 16:06:14 +0530
+Served asset /rails.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2013-05-20 16:06:14 +0530
+Served asset /sessions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/temp.js?body=1" for 127.0.0.1 at 2013-05-20 16:06:14 +0530
+Served asset /temp.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-05-20 16:06:14 +0530
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-05-20 16:06:14 +0530
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/blueprint/print.css?body=1" for 127.0.0.1 at 2013-05-20 16:06:14 +0530
+Served asset /blueprint/print.css - 304 Not Modified (0ms)
+
+
+Started GET "/users/2" for 127.0.0.1 at 2013-05-20 16:06:15 +0530
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", "2"]]
+  Rendered users/show.html.erb within layouts/application (1.7ms)
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 43ms (Views: 41.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-05-20 16:06:15 +0530
+Served asset /jquery.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/blueprint/screen.css?body=1" for 127.0.0.1 at 2013-05-20 16:06:15 +0530
+Served asset /blueprint/screen.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/about.js?body=1" for 127.0.0.1 at 2013-05-20 16:06:15 +0530
+Served asset /about.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/custom.css?body=1" for 127.0.0.1 at 2013-05-20 16:06:15 +0530
+Served asset /custom.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2013-05-20 16:06:15 +0530
+Served asset /home.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/pages.js?body=1" for 127.0.0.1 at 2013-05-20 16:06:15 +0530
+Served asset /pages.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/posts.js?body=1" for 127.0.0.1 at 2013-05-20 16:06:15 +0530
+Served asset /posts.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/rails.js?body=1" for 127.0.0.1 at 2013-05-20 16:06:15 +0530
+Served asset /rails.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2013-05-20 16:06:15 +0530
+Served asset /sessions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/temp.js?body=1" for 127.0.0.1 at 2013-05-20 16:06:15 +0530
+Served asset /temp.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-05-20 16:06:15 +0530
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-05-20 16:06:15 +0530
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/blueprint/print.css?body=1" for 127.0.0.1 at 2013-05-20 16:06:15 +0530
+Served asset /blueprint/print.css - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-05-20 16:06:15 +0530
+Processing by PagesController#home as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1[0m
+  Rendered shared/_user_info.html.erb (0.3ms)
+  Rendered pages/home.html.erb within layouts/application (1.9ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 39ms (Views: 38.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/blueprint/screen.css?body=1" for 127.0.0.1 at 2013-05-20 16:06:15 +0530
+Served asset /blueprint/screen.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/custom.css?body=1" for 127.0.0.1 at 2013-05-20 16:06:15 +0530
+Served asset /custom.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-05-20 16:06:15 +0530
+Served asset /jquery.js - 304 Not Modified (5ms)
+
+
+Started GET "/assets/about.js?body=1" for 127.0.0.1 at 2013-05-20 16:06:15 +0530
+Served asset /about.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/pages.js?body=1" for 127.0.0.1 at 2013-05-20 16:06:15 +0530
+Served asset /pages.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/home.js?body=1" for 127.0.0.1 at 2013-05-20 16:06:15 +0530
+Served asset /home.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/rails.js?body=1" for 127.0.0.1 at 2013-05-20 16:06:15 +0530
+Served asset /rails.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/posts.js?body=1" for 127.0.0.1 at 2013-05-20 16:06:15 +0530
+Served asset /posts.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/sessions.js?body=1" for 127.0.0.1 at 2013-05-20 16:06:15 +0530
+Served asset /sessions.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/temp.js?body=1" for 127.0.0.1 at 2013-05-20 16:06:15 +0530
+Served asset /temp.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-05-20 16:06:15 +0530
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-05-20 16:06:15 +0530
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/blueprint/print.css?body=1" for 127.0.0.1 at 2013-05-20 16:06:15 +0530
+Served asset /blueprint/print.css - 304 Not Modified (0ms)
