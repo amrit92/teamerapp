@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  user_id: 1
+  event_id: 1
+  title: MyString
+  description: MyString
+  date: 2013-05-20 18:33:33
+  required: 1
+  signedup: 1
+
+two:
+  user_id: 1
+  event_id: 1
+  title: MyString
+  description: MyString
+  date: 2013-05-20 18:33:33
+  required: 1
+  signedup: 1
