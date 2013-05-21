@@ -4,7 +4,7 @@ before_filter :authenticate
 
 
 def create
-	@event = current_user.event.build(params[:event])
+	@event = current_user.events.build(params[:event])
 if @event.save
 flash[:success] = "Event created!"
 redirect_to root_path

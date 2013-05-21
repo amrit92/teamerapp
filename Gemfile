@@ -26,6 +26,9 @@ group :assets do
 end
 
 gem 'jquery-rails'
+gem 'jquery-ui-rails'
+
+gem 'jquery_datepicker'
 #group :development do
 #	gem 'annotate-models', '1.0.4'
 #end

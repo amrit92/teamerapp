@@ -8,7 +8,7 @@ def home
 end
 
 def create
-@event = current_user.events.build(params[:micropost])
+@event = current_user.events.build(params[:event])
 if @event.save
 flash[:success] = "Event created!"
 redirect_to root_path
