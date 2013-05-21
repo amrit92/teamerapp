@@ -18,9 +18,14 @@ schema.rb
 /db/*.sqlite3
 
 # Ignore all logfiles and tempfiles.
-/log
-/*.log
+/log/*
+# /*.log
 /tmp
+
+# /log/development.log
+
+# /log/*.log
+
 
 
 
