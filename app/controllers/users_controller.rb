@@ -12,7 +12,7 @@ end
 
   def show
     @user = User.find(params[:id])
-   # @microposts = @user.microposts.paginate(:page => params[:page])
+    @events = @user.events.paginate(:page => params[:page])
 
     @title = @user.name
     
