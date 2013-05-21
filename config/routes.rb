@@ -15,7 +15,12 @@ Blog::Application.routes.draw do
 
   get "home/index"
 
-resources :users
+resources :users do
+    member do
+        get :doing_tasks
+    end
+end
+
 resources :sessions, :only => [:new, :create, :destroy]
 resources :events, :only => [:create, :destroy]
 resources :tasks, :only => [:create, :destroy]
