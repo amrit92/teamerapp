@@ -1,4 +1,4 @@
-.container {
+/*.container {
 width: 710px;
 }
 body {
@@ -21,7 +21,7 @@ section h1 {
 font-size: 200%;
 }
 /* Links */
-a {
+/*a {
 color: #09c;
 text-decoration: none;
 }
@@ -68,8 +68,8 @@ font-size: 90%;
 font-weight: bold;
 padding: 20px;
 }
-/* Round corners */
-.round {
+*//* Round corners */
+/*.round {
 -moz-border-radius:
 10px;
 -webkit-border-radius: 10px;
@@ -77,7 +77,15 @@ border-radius:
 10px;
 }
 
+*/
 
+navigation-bar{
+	align: right;
+
+}
+
+
+/*
 footer {
 text-align: center;
 margin-top: 10px;
@@ -197,3 +205,4 @@ form.new_micropost textarea {
 height: 4em;
 margin-bottom: 0;
 }
+*/*/

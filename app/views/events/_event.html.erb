@@ -1,5 +1,15 @@
 <tr>
-<td class="micropost">
+<td>
+<h4> <%= event.title %>  <p><small> Created <%= time_ago_in_words(event.created_at) %> ago. </small><p></h4>
+<p> <%= event.description %> </p>
+<p> <%= time_tag(event.date) %> </p>
+
+</td>
+</tr>
+
+
+<!-- <tr>
+<td>
 <span class="title"><%= event.title %></span>
 <span class="content"><%= event.description %></span>
 <span class="content"><%= time_tag(event.date) %></span>
@@ -8,3 +18,4 @@ Created <%= time_ago_in_words(event.created_at) %> ago.
 </span>
 </td>
 </tr>
+ -->

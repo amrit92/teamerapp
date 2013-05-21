@@ -9,6 +9,8 @@ gem 'rails', '3.2.13'
 gem 'sqlite3'
 gem 'therubyracer'
 gem 'simple_form'
+gem 'bootstrap-sass'
+
 
 # Gems used only for assets and not required
 # in production environments by default.

@@ -1,27 +1,20 @@
 
-<!-- 
-<%= simple_form_for @user do |f| %>
-  <%= f.input :title%>
-  <%= f.input :description, as: :text %>
-  <%= f.submit, 'Create event' %>
-<% end %>
- -->
-
 
 <%= form_for @event do |f| %>
 <%= render 'shared/error_messages', :object => f.object %>
-<div class="title">
+<!-- <div class="title"> -->
 	<%= f.label :title%>
-<%= f.text_field :title %>
-</div>
+	<%= f.text_field :title %>
+<!-- </div> --> <br>
+  Date and Time <br>
   <%= f.datetime_picker 'date', :dateFormat => "yy-mm-dd " , :timeFormat=> "hh:mm tt z" %>
 
 <div class="field">
 	<%= f.label :description%>
-<%= f.text_area :description %>
+	<%= f.text_area :description %>
 
 </div>
 <div class="actions">
-<%= f.submit "Submit" %>
+	<%= f.submit "Submit" %>
 </div>
 <% end %>
