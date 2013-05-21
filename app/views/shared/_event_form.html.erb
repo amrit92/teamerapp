@@ -4,6 +4,7 @@
 	<%= f.label :title%>
 <%= f.text_field :title %>
 </div>
+  <%= f.datetime_picker 'date', :dateFormat => "yy-mm-dd " , :timeFormat=> "hh:mm tt z" %>
 
 <div class="field">
 	<%= f.label :description%>

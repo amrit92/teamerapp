@@ -14,4 +14,7 @@
 // '//ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js', :defer
 // => true, :async => true
 //= require jquery
+//= require jquery_ujs
+//= require jquery-ui
+//= require jquery-ui-timepicker-addon.js
 //= require_tree .
