@@ -1,7 +1,7 @@
 Blog::Application.routes.draw do
-  get "sessions/new"
+  #get "sessions/new"
 
-  get "users/new"
+  #get "users/new"
 
   get "pages/home"
 
@@ -18,6 +18,7 @@ Blog::Application.routes.draw do
 resources :users
 resources :sessions, :only => [:new, :create, :destroy]
 resources :events, :only => [:create, :destroy]
+resources :tasks, :only => [:create, :destroy]
 
 #, :only => [:create,:destroy]
 
