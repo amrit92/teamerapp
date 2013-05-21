@@ -4,4 +4,13 @@ class Task < ActiveRecord::Base
   belongs_to :event, :dependent => :destroy
   has_many :users, :dependent => :destroy
 
+  validates :title, :presence =>true, :length => { :maxmum => 40}
+  validates :description, :presence => true, :length => { :maxmum => 140}
+
+  validates :user_id, :presence =>true
+  validates :event_id, :presence =>true
+
+  validates :required, :presence =>true
+  validates :signedup, :presence =>true
+
 end
