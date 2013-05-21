@@ -1,4 +1,13 @@
-<h1>Sign in</h1>
+<h1> Sign in </h1>
+
+<!--
+<%= simple_form_for(:session, :url => sessions_path) do |f| %>
+  <%= f.input :email, label: 'your email'%>
+  <%= f.input :password %>
+  <%= f.submit 'Sign in'%>
+<% end %>
+-->
+
 <%= form_for(:session, :url => sessions_path) do |f| %>
 <div class="field">
 <%= f.label :email %><br />

@@ -1,3 +1,13 @@
+
+<!-- 
+<%= simple_form_for @user do |f| %>
+  <%= f.input :title%>
+  <%= f.input :description, as: :text %>
+  <%= f.submit, 'Create event' %>
+<% end %>
+ -->
+
+
 <%= form_for @event do |f| %>
 <%= render 'shared/error_messages', :object => f.object %>
 <div class="title">
