@@ -17,7 +17,7 @@ Blog::Application.routes.draw do
 
 resources :users do
     member do
-        get :doing_tasks
+        get :doing_tasks, :following
     end
 end
 

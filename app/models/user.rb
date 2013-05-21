@@ -4,7 +4,7 @@ attr_accessor :password
 attr_accessible :name, :email, :password, :password_confirmation
 has_many :events, :dependent => :destroy
 has_many :tasks, :dependent => :destroy
-
+has_many :follows, :foreign_key => "follower_id", :dependent => :destroy
 has_many :takens, :foreign_key => “taker_id”,
 				  :dependent => :destroy
 
@@ -29,6 +29,24 @@ before_save :encrypt_password
 def has_password?(submitted_password)
 	encrypted_password == encrypt(submitted_password)
 end
+def following?(followed)
+follows.find_by_followed_id(followed)
+end
+def followevent!(followed) 
+follows.create!(:followed_id => followed.id)
+end
+
+def taken?(taken)
+
+takens.find_by_taken_id(taken_id)
+
+end
+
+def take!(taken)
+
+takens.create!(:taken_id => taken.id)
+
+end
 
 	#def feed
 # This is preliminary. See Chapter 12 for the full implementation.
@@ -50,17 +68,7 @@ private
 	end
 
 
-def taken?(taken)
 
-takens.find_by_taken_id(taken_id)
-
-end
-
-def take!(taken)
-
-takens.create!(:taken_id => taken.id)
-
-end
 
 def self.authenticate(email, submitted_password)
 user = find_by_email(email)
