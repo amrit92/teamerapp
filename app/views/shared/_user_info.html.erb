@@ -4,6 +4,9 @@
 <span class="user_name">
 <%= current_user.name %>
 </span>
+<span class="microposts">
+<%= pluralize(current_user.events.count, "event") %>
+</span>
 
 </a>
 </div>
