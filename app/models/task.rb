@@ -4,6 +4,11 @@ class Task < ActiveRecord::Base
   belongs_to :event, :dependent => :destroy
   has_many :users, :dependent => :destroy
 
+  has_many :takens, :foreign_key => “taken_id”,
+					:dependent => :destroy
+
+  default_scope :order => 'tasks.created_at DESC'
+
   validates :title, :presence =>true, :length => { :maxmum => 40}
   validates :description, :presence => true, :length => { :maxmum => 140}
 

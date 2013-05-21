@@ -1,9 +1,10 @@
-
 <!-- 
 <%= simple_form_for @user do |f| %>
   <%= f.input :title%>
   <%= f.input :description, as: :text %>
-  <%= f.submit, 'Create event' %>
+  <%= f.input :required%>
+  <%= f.input :signedup%>
+  <%= f.submit, 'Create task' %>
 <% end %>
  -->
 
@@ -14,7 +15,6 @@
 	<%= f.label :title%>
 <%= f.text_field :title %>
 </div>
-  <%= f.datetime_picker 'date', :dateFormat => "yy-mm-dd " , :timeFormat=> "hh:mm tt z" %>
 
 <div class="field">
 	<%= f.label :description%>
