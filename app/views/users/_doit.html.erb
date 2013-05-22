@@ -1,0 +1,6 @@
+<%= form_for current_user.takens.build(:taken_id => task.id) do |f| %>
+	<%= f.hidden_field :taken_id %>
+	<%= f.submit "Do" %>
+<% end %>
+
+

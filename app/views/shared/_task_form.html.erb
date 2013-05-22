@@ -25,8 +25,9 @@
 
 
 	<%= f.hidden_field :event_id, :value => @event.id %>
+	<%= f.hidden_field :signedup, :value => 0 %>
 
 	<div class="actions">
-	<%= f.submit "Submit" %>
+	<%= f.submit "Create task" %>
 	</div>
 <% end %>
