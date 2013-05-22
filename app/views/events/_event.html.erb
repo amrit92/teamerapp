@@ -4,7 +4,8 @@
 		<p> <%= time_tag(event.date) %> </p>
 		<p><small> Created <%= time_ago_in_words(event.created_at) %> ago. </small></p>
 		<%= link_to 'Create Task', tasks_path, :method => :post%>
-		
+		<%= render :partial => 'users/follow_form',:locals => { :event => event} if signed_in? %>
+
 
 	</td>
 </tr>

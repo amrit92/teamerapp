@@ -17,12 +17,17 @@ Blog::Application.routes.draw do
 
 resources :users do
     member do
-        get :doing_tasks, :following
+        get :doing_tasks, :following 
     end
 end
 
 resources :sessions, :only => [:new, :create, :destroy]
-resources :events, :only => [:create, :destroy]
+resources :events, :only => [:create, :destroy] do 
+  member do
+    post :follow
+  end
+end
+resources :follows, :only => [:create, :destroy]
 resources :tasks, :only => [:create, :destroy, :new]
 
 #, :only => [:create,:destroy]

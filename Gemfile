@@ -10,7 +10,7 @@ gem 'sqlite3'
 gem 'therubyracer'
 gem 'simple_form'
 gem 'bootstrap-sass'
-
+gem 'binding_of_caller'
 
 # Gems used only for assets and not required
 # in production environments by default.
