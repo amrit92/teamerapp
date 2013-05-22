@@ -1,7 +1,9 @@
 class EventsController < ApplicationController
 before_filter :authenticate
 
-
+def new
+	@event = Event.new
+end
 
 def create
 @event = current_user.events.build(params[:event])
@@ -9,6 +11,7 @@ def create
 	if @event.save
 		flash[:success] = "Event created!"
 		redirect_to root_path
+		@current_user.followevent!(@event)
 	else
 		render 'pages/home'
 	end
@@ -17,7 +20,7 @@ end
 def destroy
 end
 
-def follow
+def followshow
 end
 
 def show

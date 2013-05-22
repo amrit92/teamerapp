@@ -15,6 +15,9 @@ Blog::Application.routes.draw do
 
   get "home/index"
 
+  get "pages/newevent"
+
+
   #get "task/new"
 
 resources :users do
@@ -24,7 +27,7 @@ resources :users do
 end
 
 resources :sessions, :only => [:new, :create, :destroy]
-resources :events, :only => [:create, :destroy] do 
+resources :events, :only => [:new, :create, :destroy] do 
   member do
     post :follow
   end

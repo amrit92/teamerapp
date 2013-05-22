@@ -2,23 +2,40 @@
 	<table  summary="For signed-in users">
 		<tr>
 			<td>
-				<h2>Add Events</h2>
-				<%= render 'shared/event_form' %>
+				<h3>Create Events</h3>
+				<%= link_to 'Add a new Event', new_event_path %>
+				<br >
+				<br >
+				<br >
+				 <%#= render 'shared/event_form' %>
 
 			</td>
 
 			<td > <!-- class="sidebar round"> -->
 				<%= render 'shared/user_info' %>
 			</td>
+			<td >
+				<p> List of Events </p>
+			</td>
+				<%  @eventlist=Event.all %>
+				<% # @eventlist= @eventlist.paginate(:page => 1, :per_page => 2)%>
+
+				<% unless @eventlist.empty? %>
+					<table class="table table-striped">
+						<%= render @eventlist %>
+					</table>
+
+					<%#= will_paginate @eventlist %>
+				<% end %>
 		</tr>
 	</table>
-	
+	<%# fadsfds%>
+
 <% else %>
 	<h1>Sample App</h1>
 	<p>
 		This is the home page for the
-		<a href="http://railstutorial.org/">Ruby on Rails Tutorial</a>
-		sample application.
+		 application.
 	</p>
 	<%= link_to "Sign up now!", signup_path, :class => "signup_button round" %>
 <% end %>

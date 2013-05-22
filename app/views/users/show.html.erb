@@ -9,6 +9,20 @@
 					<%= @user.name %>
 				</h1>
 
+			
+				<%#@list = current_user.follows.find(:all, :conditions => [ "follower_id = @user" ]) %>
+				<%@list = current_user.follows.collect(&:followed_id).each do |id| %>
+					
+				<%#@listss = current_user.follows.collect(&:f) %>
+
+				<% #unless @list.empty? %>
+					<% @listss =Event.find_by_id(id)  %>
+					<table class="table table-striped">
+						<%= render @listss %>
+					</table>
+					<%= will_paginate @events %>
+				<% end %>
+
 				<% unless @user.events.empty? %>
 					<table class="table table-striped">
 						<%= render @events %>
