@@ -44,6 +44,10 @@ def unfollow!(followed)
 	follows.find_by_followed_id(followed).destroy
 end
 
+def followfind(follower)
+	return follows.find_by_followed_id(follower)
+
+end
 
 def taken?(taken)
 
