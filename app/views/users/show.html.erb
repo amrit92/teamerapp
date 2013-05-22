@@ -20,15 +20,16 @@
 					<table class="table table-striped">
 						<%= render @listss %>
 					</table>
-					<%= will_paginate @events %>
+					<%#= will_paginate @listss %>
 				<% end %>
-
-				<% unless @user.events.empty? %>
+			<!--
+				<%# unless @user.events.empty? %>
 					<table class="table table-striped">
-						<%= render @events %>
+						<%#= render @events %>
 					</table>
-					<%= will_paginate @events %>
-				<% end %>
+					<%#= will_paginate @events %>
+				<%# end %>
+			-->
 			</td>	
 		</tr>
 	</table>
