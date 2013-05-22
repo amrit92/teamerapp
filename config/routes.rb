@@ -27,11 +27,7 @@ resources :users do
 end
 
 resources :sessions, :only => [:new, :create, :destroy]
-resources :events, :only => [:new, :create, :destroy] do 
-  member do
-    post :follow
-  end
-end
+resources :events, :only => [:new, :create, :destroy] 
 resources :follows, :only => [:create, :destroy]
 
 resources :takens, :only => [:create, :destroy]

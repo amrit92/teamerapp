@@ -1,5 +1,7 @@
 class EventsController < ApplicationController
-before_filter :authenticate
+before_filter :authenticate, :only => [:create, :destroy]
+#before_filter :creator_user, :only => :destroy
+
 
 def new
 	@event = Event.new
@@ -18,13 +20,19 @@ def create
 end
 
 def destroy
+	@event = Event.find(params[:id])
+	if @event.present?
+	@event.destroy
+	end
+	redirect_back_or root_path
 end
+
 
 def followshow
 end
 
 def show
-	@event = User.find(params[:id])
+	@event = Event.find(params[:id])
 	@events = @user.events.paginate(:page => params[:page])
 	@title = @user.name
 end

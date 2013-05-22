@@ -6,7 +6,7 @@ class TakensController < ApplicationController
 		redirect_to @current_user
 	end
 	def destroy
-		#@task = Task.find(params[:id]).taken
+
 		#@task = Task.find(params[:taken][:taken_id])
 		
 		@taken = Taken.find(params[:id])

@@ -28,10 +28,19 @@
 			</table>
 		<% end %>
 
+
+			<% user = event.user rescue User.find(event.user_id) %>
+		<% if current_user?(user) %>
+
+		<td>
+			<%= link_to "delete", event, :method => :delete,
+										 :confirm => "You sure?",
+										 :title => event.title %>
+		</td>
+		<% end %>
+
 	<td>
 <tr>
-
-
 
 
  
