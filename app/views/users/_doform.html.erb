@@ -1,0 +1,6 @@
+
+<% if current_user.taken?(task) %> 
+	<%= render :partial => 'users/leave',:locals => {:task => task} %>
+<% else (task.required - task.signedup) > 0 %>
+  <%= render :partial => 'users/doit', :locals => { :task => task} %>
+<% end %>

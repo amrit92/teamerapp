@@ -30,8 +30,15 @@ resources :events, :only => [:create, :destroy] do
   end
 end
 resources :follows, :only => [:create, :destroy]
-resources :tasks, :only => [:create, :destroy, :new]
 
+resources :takens, :only => [:create, :destroy]
+
+
+resources :tasks, :only => [:create, :destroy, :new] do
+  member do
+    post :taken
+  end
+end
 #, :only => [:create,:destroy]
 
 match '/signup',:to => 'users#new'

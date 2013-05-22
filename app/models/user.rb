@@ -12,8 +12,7 @@ has_many :follows, :foreign_key => "follower_id", :dependent => :destroy
 has_many :takens, :foreign_key => "taker_id",
 				  :dependent => :destroy
 
-has_many  :doing_tasks, :through => :takens, 
-						:source => :taken
+# has_many  :doing_tasks, :through => :takens, :source => :taken
 
 email_regex = /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i
 
@@ -48,14 +47,20 @@ end
 
 def taken?(taken)
 
-takens.find_by_taken_id(taken_id)
+	takens.find_by_taken_id(taken)
 
 end
 
 def take!(taken)
 
-takens.create!(:taken_id => taken.id)
+	takens.create!(:taken_id => taken.id)
 
+end
+
+def leave_task!(taken)
+
+	takens.find_by_taken_id(taken).destroy
+	
 end
 
 	#def feed

@@ -5,7 +5,7 @@
 		<p><small> Created <%= time_ago_in_words(event.created_at) %> ago. </small></p>
 
 	
-		<%= link_to 'Create Task', tasks_path, :method => :post%>
+
 		<%= render :partial => 'users/follow_form',:locals => { :event => event} if signed_in? %>
 
 		<%= link_to 'Create Task', new_task_path(:id => event.id) %>
@@ -14,38 +14,31 @@
 		<table summary="Event Tasks">
 			<%= event.tasks.each do |task| %>
 			<tr>
-				<td>
+				
 					<h4> <%= task.title %>  </h4> <p> <%= task.description %> </p>   
 					<p> <%= time_tag(event.date) %> </p>
-				</td>
-				<td>
+				
+				
 					Required : <%= task.required%> Signedup : <%= task.signedup%>
-				</td>	
-				<td>
+				
 					<p><small> Created <%= time_ago_in_words(event.created_at) %> ago. </small></p>
-				</td>
+					<%= render :partial => 'users/doform',:locals => { :task => task} if signed_in? %>
 			</tr>
 			<% end %>		
 
 			</table>
 		<% end %>
 
+	<td>
+<tr>
 
 
-<!-- <tr>
-<td>
-<span class="title"><%= event.title %></span>
-<span class="content"><%= event.description %></span>
-<span class="content"><%= time_tag(event.date) %></span>
-<span class="timestamp">
-Created <%= time_ago_in_words(event.created_at) %> ago.
-</span>
-</td>
-</tr>
+
+
  
 
 
 
 
 
- -->
+ 

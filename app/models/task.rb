@@ -1,5 +1,5 @@
 class Task < ActiveRecord::Base
-  attr_accessible :date, :description, :event_id, :required, :title, :user_id
+  attr_accessible :date, :description, :event_id, :required, :title, :user_id, :signedup
 
   belongs_to :event, :dependent => :destroy
   has_many :users, :dependent => :destroy
@@ -17,5 +17,9 @@ class Task < ActiveRecord::Base
 
   validates :required, :presence =>true
   validates :signedup, :presence =>true
+
+  def taken?(followed)
+    takens.find_by_taken_id(taken)
+  end
 
 end

@@ -1,0 +1,5 @@
+#debugger
+<%= form_for(current_user.takens.find_by_taken_id(task),
+    html: { :method => :delete }) do |f| %>
+	<%= f.submit "Leave" %>
+<% end %>
