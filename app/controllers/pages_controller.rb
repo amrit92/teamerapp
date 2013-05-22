@@ -5,6 +5,8 @@ before_filter :authorized_user, :only => :destroy
 def home
 @title= "home"
 @event = Event.new if signed_in?
+@create_task = Task.new
+
 end
 
 def create

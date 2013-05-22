@@ -3,11 +3,28 @@
 		<h4 style = "display:inline"> <%= event.title %>  </h4> <p> <%= event.description %> </p>   
 		<p> <%= time_tag(event.date) %> </p>
 		<p><small> Created <%= time_ago_in_words(event.created_at) %> ago. </small></p>
-		<%= link_to 'Create Task', tasks_path, :method => :post%>
-		
+		<%= link_to 'Create Task', new_task_path(:id => event.id) %>
+			
+		<% unless event.tasks.empty? %>
+		<table summary="Event Tasks">
+			<%= event.tasks.each do |task| %>
+			<tr>
+				<td>
+					<h4> <%= task.title %>  </h4> <p> <%= task.description %> </p>   
+					<p> <%= time_tag(event.date) %> </p>
+				</td>
+				<td>
+					Required : <%= task.required%> Signedup : <%= task.signedup%>
+				</td>	
+				<td>
+					<p><small> Created <%= time_ago_in_words(event.created_at) %> ago. </small></p>
+				</td>
+			</tr>
+			<% end %>		
 
-	</td>
-</tr>
+			</table>
+		<% end %>
+
 
 
 <!-- <tr>
@@ -20,4 +37,10 @@ Created <%= time_ago_in_words(event.created_at) %> ago.
 </span>
 </td>
 </tr>
+ 
+
+
+
+
+
  -->

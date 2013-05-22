@@ -1,16 +1,18 @@
-class TaskController < ApplicationController
+class TasksController < ApplicationController
 
 #before_filter signed_in?   && belongs_to_event??
 	def new
-		@task = Task.new
-		render 'task/new'
+		#debugger
+		@event = Event.find(params[:id]) 
+		@task = Task.new # if signed_in?
 	end
 	
 	def create
-		@task = current_event.task.build(params[:task])
-		@task.user_id = current_user.id
+		#debugger
+		@task = current_user.tasks.build(params[:task])
 		if @task.save
 			flash[:success] = "New Task Created"
+			redirect_to root_path
 		else
 			render 'pages/home'
 		end

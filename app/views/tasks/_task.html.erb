@@ -1,0 +1,12 @@
+<tr>
+	<td>
+		<h4> <%= task.title %>  </h4> <p> <%= task.description %> </p>   
+		<p> <%= time_tag(event.date) %> </p>
+	</td>
+	<td>
+		Required : <%= task.Required%> Signedup : <%= task.signedup%>
+	</td>	
+	<td>
+		<p><small> Created <%= time_ago_in_words(event.created_at) %> ago. </small></p>
+	</td>
+</tr>

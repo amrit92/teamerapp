@@ -11,9 +11,9 @@ end
 
 
   def show
-    @user = User.find(params[:id])
+  	@user = User.find(params[:id])
+    #@create_task = Task.new
     @events = @user.events.paginate(:page => params[:page])
-
     @title = @user.name
     
   end
@@ -72,9 +72,6 @@ end
 def admin_user
 redirect_to(root_path) unless current_user.admin?
 end
-
-
-
 
 
 end

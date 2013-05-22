@@ -1,27 +1,32 @@
-<!-- 
-<%= simple_form_for @user do |f| %>
-  <%= f.input :title%>
-  <%= f.input :description, as: :text %>
-  <%= f.input :required%>
-  <%= f.input :signedup%>
-  <%= f.submit, 'Create task' %>
-<% end %>
- -->
 
 
-<%= form_for @event do |f| %>
-<%= render 'shared/error_messages', :object => f.object %>
-<div class="title">
-	<%= f.label :title%>
-<%= f.text_field :title %>
-</div>
 
-<div class="field">
+<%= form_for @task do |f| %>
+
+	<%= render 'shared/error_messages', :object => f.object %>
+	<div class="title">
+		<%= f.label :title%>
+	<%= f.text_field :title %>
+	</div>
+
+	<div class="field">
 	<%= f.label :description%>
-<%= f.text_area :description %>
+	<%= f.text_area :description %>
 
-</div>
-<div class="actions">
-<%= f.submit "Submit" %>
-</div>
+	</div>
+
+	Date and Time <br>
+	<%= f.datetime_picker 'date', :dateFormat => "yy-mm-dd " , :timeFormat=> "hh:mm tt z" %>
+	<br>
+
+	<%= f.label :required%>
+	<%= f.text_field :required %>
+	<br>
+
+
+	<%= f.hidden_field :event_id, :value => @event.id %>
+
+	<div class="actions">
+	<%= f.submit "Submit" %>
+	</div>
 <% end %>

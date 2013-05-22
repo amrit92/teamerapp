@@ -15,6 +15,8 @@ Blog::Application.routes.draw do
 
   get "home/index"
 
+  #get "task/new"
+
 resources :users do
     member do
         get :doing_tasks, :following

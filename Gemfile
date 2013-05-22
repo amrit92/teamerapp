@@ -12,6 +12,8 @@ gem 'simple_form'
 gem 'bootstrap-sass'
 
 
+gem 'binding_of_caller'
+
 # Gems used only for assets and not required
 # in production environments by default.
 group :assets do
@@ -48,6 +50,6 @@ gem 'jquery_datepicker'
 # gem 'capistrano'
 
 # To use debugger
-# gem 'debugger'
+ gem 'debugger'
 
 
