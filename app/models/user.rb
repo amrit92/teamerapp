@@ -6,6 +6,9 @@ attr_accessible :name, :email, :password, :password_confirmation
 has_many :events, :dependent => :destroy
 has_many :tasks, :dependent => :destroy
 has_many :follows, :foreign_key => "follower_id", :dependent => :destroy
+
+
+
 has_many :takens, :foreign_key => "taker_id",
 				  :dependent => :destroy
 
@@ -31,11 +34,17 @@ def has_password?(submitted_password)
 	encrypted_password == encrypt(submitted_password)
 end
 def following?(followed)
-follows.find_by_followed_id(followed)
+	follows.find_by_followed_id(followed)
 end
+
 def followevent!(followed) 
-follows.create!(:followed_id => followed.id)
+	follows.create!(:followed_id => followed.id)
 end
+
+def unfollow!(followed)
+	follows.find_by_followed_id(followed).destroy
+end
+
 
 def taken?(taken)
 

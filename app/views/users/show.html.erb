@@ -8,6 +8,7 @@
 					<%= gravatar_for @user %>
 					<%= @user.name %>
 				</h1>
+
 				<% unless @user.events.empty? %>
 					<table class="table table-striped">
 						<%= render @events %>
