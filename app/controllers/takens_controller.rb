@@ -8,10 +8,11 @@ class TakensController < ApplicationController
 	def destroy
 		#@task = Task.find(params[:id]).taken
 		#@task = Task.find(params[:taken][:taken_id])
-		@task = Task.find(params[:id])
+		
+		@taken = Taken.find(params[:id])
 		#@task = Task.find(:taken_id)
 		
-		current_user.leave_task!(@task)
+		current_user.leave_task!(params[:id])
 		redirect_to @current_user
 	end
 end

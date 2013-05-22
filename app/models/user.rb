@@ -49,9 +49,9 @@ def followfind(follower)
 
 end
 
-def taken?(taken)
+def taken?(task)
 
-	takens.find_by_taken_id(taken)
+	self.takens.where("taken_id = ?",task.id).present?
 
 end
 
@@ -62,8 +62,9 @@ def take!(taken)
 end
 
 def leave_task!(taken)
-
-	takens.find_by_taken_id(taken).destroy
+	debugger
+	1
+	self.takens.find_by_id(taken).destroy
 	
 end
 
