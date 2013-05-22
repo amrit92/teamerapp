@@ -1,7 +1,11 @@
 class TaskController < ApplicationController
 
 #before_filter signed_in?   && belongs_to_event??
-
+	def new
+		@task = Task.new
+		render 'task/new'
+	end
+	
 	def create
 		@task = current_event.task.build(params[:task])
 		@task.user_id = current_user.id

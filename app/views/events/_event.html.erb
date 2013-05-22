@@ -1,10 +1,12 @@
 <tr>
-<td>
-<h4> <%= event.title %>  <p><small> Created <%= time_ago_in_words(event.created_at) %> ago. </small><p></h4>
-<p> <%= event.description %> </p>
-<p> <%= time_tag(event.date) %> </p>
+	<td>
+		<h4 style = "display:inline"> <%= event.title %>  </h4> <p> <%= event.description %> </p>   
+		<p> <%= time_tag(event.date) %> </p>
+		<p><small> Created <%= time_ago_in_words(event.created_at) %> ago. </small></p>
+		<%= link_to 'Create Task', tasks_path, :method => :post%>
+		
 
-</td>
+	</td>
 </tr>
 
 

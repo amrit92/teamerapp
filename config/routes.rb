@@ -23,7 +23,7 @@ end
 
 resources :sessions, :only => [:new, :create, :destroy]
 resources :events, :only => [:create, :destroy]
-resources :tasks, :only => [:create, :destroy]
+resources :tasks, :only => [:create, :destroy, :new]
 
 #, :only => [:create,:destroy]
 

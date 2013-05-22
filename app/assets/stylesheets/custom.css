@@ -205,4 +205,19 @@ form.new_micropost textarea {
 height: 4em;
 margin-bottom: 0;
 }
-*/*/
+*/
+
+section {
+	margin-top: 1em;
+	padding: 40px;
+}
+/*
+body {
+	background-color: #ffc;
+}*/
+
+.container {
+	width :1010px;
+	background-color: #eff;
+
+}

@@ -1,23 +1,24 @@
 <% if signed_in? %>
-<table  summary="For signed-in users">
-<tr>
-<td>
-<h2>Add Events</h2>
-<%= render 'shared/event_form' %>
+	<table  summary="For signed-in users">
+		<tr>
+			<td>
+				<h2>Add Events</h2>
+				<%= render 'shared/event_form' %>
 
-</td>
+			</td>
 
-<td > <!-- class="sidebar round"> -->
-<%= render 'shared/user_info' %>
-</td>
-</tr>
-</table>
+			<td > <!-- class="sidebar round"> -->
+				<%= render 'shared/user_info' %>
+			</td>
+		</tr>
+	</table>
+	
 <% else %>
-<h1>Sample App</h1>
-<p>
-This is the home page for the
-<a href="http://railstutorial.org/">Ruby on Rails Tutorial</a>
-sample application.
-</p>
-<%= link_to "Sign up now!", signup_path, :class => "signup_button round" %>
+	<h1>Sample App</h1>
+	<p>
+		This is the home page for the
+		<a href="http://railstutorial.org/">Ruby on Rails Tutorial</a>
+		sample application.
+	</p>
+	<%= link_to "Sign up now!", signup_path, :class => "signup_button round" %>
 <% end %>
