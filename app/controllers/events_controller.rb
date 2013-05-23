@@ -15,6 +15,7 @@ def create
 		redirect_to root_path
 		@current_user.followevent!(@event)
 	else
+		flash[:error] = "Failed to create"
 		render 'pages/home'
 	end
 end

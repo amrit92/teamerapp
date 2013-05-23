@@ -1,4 +1,6 @@
-<strong>Name</strong> <%= @user.name %><br><br>
-<strong>URL</strong> <%= link_to user_path(@user), @user %>   
-<p>  Events signedup :<%= @user.events.count %></p> 
- <%= link_to 'My Tasks', task_path%>
+<h2> <%= @user.name%>  </h2>
+<h5>
+	<%= link_to user_path(@user), @user %>  <br>
+	Signedup <%= pluralize(@user.events.count, "event") %> <br>
+	Doing <%= pluralize( @user.doing_tasks.count, "task") %> <br>
+</h5>

@@ -1,12 +1,12 @@
-<div class="user_info">
-<a href="<%= user_path(current_user) %>">
-<%= gravatar_for current_user, :size => 30 %>
-<span class="user_name">
-<%= current_user.name %>
-</span>
-<span class="microposts">
-<%= pluralize(current_user.events.count, "event") %>
-</span>
 
+<h2> <%= current_user.name%>  </h2>
+<h5>
+	<a href="<%= user_path(current_user) %>">
+	<%= gravatar_for current_user, :size => 30 %> <br>
 </a>
-</div>
+	Signedup <%= pluralize(current_user.events.count, "event") %> <br>
+	Doing <%= pluralize( current_user.doing_tasks.count, "task") %> <br> 
+	
+</h5>
+
+

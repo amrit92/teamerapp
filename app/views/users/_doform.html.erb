@@ -1,6 +1,9 @@
 
-<% if current_user.taken?(task) %>
-	<%= render :partial => 'users/leave',:locals => {:task => task} %>
-<% else (task.required - task.signedup) > 0 %>
-  <%= render :partial => 'users/doit', :locals => { :task => task} %>
+<% event = Event.find_by_id(task.event_id) %>
+<% if current_user.following?(event) %>
+	<% if current_user.taken?(task) %>
+		<%= render :partial => 'users/leave',:locals => {:task => task} %>
+	<% else (task.required - task.signedup) > 0 %>
+	  <%= render :partial => 'users/doit', :locals => { :task => task} %>
+	<% end %>
 <% end %>

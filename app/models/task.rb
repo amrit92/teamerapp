@@ -7,7 +7,7 @@
   has_many :takens, :foreign_key => "taken_id",
 					:dependent => :destroy
 
-  has_many :doing_tasks, :through => :relationships, :source => :taken
+  
 
 
   default_scope :order => 'tasks.created_at DESC'

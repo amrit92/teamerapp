@@ -1,4 +1,5 @@
 
+
 <div >
 		<h4 id="event<%=index%>"> <%= event.title %> :  </h4> <br>
 		<p><%= event.description %> <br>
@@ -22,7 +23,7 @@
 		<div id="tasks<%= index %>"	
 				<% event.tasks.each_with_index do |task, index| %>
 		
-					<h4> style="display:inline"> <%= task.title %>  </h4> <br>
+					<h4 style="display:inline"> <%= task.title %>  </h4> <br>
    			 	<p> <%= task.description %> <br>  
    			 	<%= time_tag(event.date) %>    <br>    
    			 	Required : <%= task.required - task.users.count%> <br>

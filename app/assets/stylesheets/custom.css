@@ -1,19 +1,38 @@
+.error, .alert, .notice, .success, .info {padding:0.8em;margin-bottom:1em;border:2px solid #ddd;}
+.success {background:#e6efc2;color:#264409;border-color:#c6d880;}
+
+.masthead h1 {
+    font-size: 120px;
+    line-height: 1;
+    letter-spacing: -2px;
+    margin-right: auto;
+	margin-left: auto
+}
+
+.masthead p {
+    font-size: 17px;
+    font-weight: 200;
+    line-height: 1.25;
+}
+
+
 section {
 	margin-top: 1em;
 	padding: 40px;
 }
-/*
-body {
-	background-color: #ffc;
-}*/
+
 
 .container {
-	width :1010px;
+	width :1170px;
 	background-color: #E6E6E6;
+	margin-right: auto;
+	margin-left: auto;
 
 }
 
-
+body {
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+}
 
 a.signup_button {
 margin-left: auto;
@@ -22,15 +41,17 @@ display: block;
 text-align: center;
 width: 100px;
 color: #fff;
-background: #0B610B;
-font-size: 100%;
+
+font-size: 120%;
 font-weight: bold;
 padding: 20px;
 -moz-border-radius:
 10px;
--webkit-border-radius: 10px;
+-webkit-borde	r-radius: 10px;
 border-radius:
 10px;
+/*background: #0B610B;
+*/
 }
 
 
