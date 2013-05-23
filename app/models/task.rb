@@ -8,8 +8,6 @@
 					:dependent => :destroy
 
   
-
-
   default_scope :order => 'tasks.created_at DESC'
 
   validates :title, :presence =>true, :length => { :maximum => 40}
