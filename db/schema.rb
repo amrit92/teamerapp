@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130521122816) do
+ActiveRecord::Schema.define(:version => 20130523042934) do
 
   create_table "events", :force => true do |t|
     t.integer  "user_id"
@@ -34,6 +34,15 @@ ActiveRecord::Schema.define(:version => 20130521122816) do
   add_index "follows", ["followed_id"], :name => "index_follows_on_followed_id"
   add_index "follows", ["follower_id", "followed_id"], :name => "index_follows_on_follower_id_and_followed_id", :unique => true
   add_index "follows", ["follower_id"], :name => "index_follows_on_follower_id"
+
+  create_table "invites", :force => true do |t|
+    t.integer  "uid"
+    t.integer  "eid"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  add_index "invites", ["eid", "uid"], :name => "index_invites_on_eid_and_uid", :unique => true
 
   create_table "posts", :force => true do |t|
     t.string   "name"

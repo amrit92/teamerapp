@@ -9,6 +9,12 @@ class Event < ActiveRecord::Base
                                    :dependent => :destroy
 	has_many :followers, :through => :reverse_follows, :source => :follower
 
+	 has_many :reverse_invites, :foreign_key=> "eid",
+                                   :class_name => "Invite",
+                                   :dependent => :destroy
+ has_many :inviters, :through => :reverse_relationships, :source => :inviter
+
+
 	has_many :tasks, :dependent => :destroy
 	belongs_to :user
 

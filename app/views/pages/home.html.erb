@@ -1,33 +1,28 @@
 <% if signed_in? %>
-	<table  summary="For signed-in users">
-		<tr>
-			<td>
-				<h4><%= link_to 'Create Event', new_event_path %> </h4>
-				<br >
-				<br >
-				<br >
-				 <%#= render 'shared/event_form' %>
 
-			</td>
+		
+				<div>		
+					<h4><%= link_to 'Create Event', new_event_path %> </h4>
+					<br >	<br >	<br >
+				</div>
 
-			<td > <!-- class="sidebar round"> -->
 				<%= render 'shared/user_info' %>
-			</td>
-			<td >
-				<!-- <p> List of Events </p> -->
-			</td>
-				<%  @eventlist=Event.all %>
-				<% # @eventlist= @eventlist.paginate(:page => 1, :per_page => 2)%>
-
-				<% unless @eventlist.empty? %>
+				
+				<div>
+					<%  @eventlist=Event.all %>
+					<% # @eventlist= @eventlist.paginate(:page => 1, :per_page => 2)%>
+				<% @eventlist.each_with_index do |vel,index|%>
+					<div>
 					<table class="table table-striped">
-						<%= render @eventlist %>
+						<%= render vel, :index => index %>
 					</table>
-
-					<%#= will_paginate @eventlist %>
+					<%#= will_paginate @listss %>
+					</div>
 				<% end %>
-		</tr>
-	</table>
+
+
+				</div>
+
 	<%# fadsfds%>
 
 <% else %>

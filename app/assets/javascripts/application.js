@@ -19,3 +19,13 @@
 //= require jquery-ui-timepicker-addon.js
 //= require bootstrap
 //= require_tree .
+
+
+ $(function() {
+
+ $('[id^="tasks"]').hide();
+ $('[id^="event"]').click(function() {
+   $(jQuery(this).parent().siblings('[id^="tasks"]').toggle("blind", {}, 500));
+   return false;
+ });
+});

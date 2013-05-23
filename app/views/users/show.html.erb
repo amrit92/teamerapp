@@ -8,19 +8,18 @@
 					<%= gravatar_for @user %>
 					<%= @user.name %>
 				</h1>
+			</td>	
+		</tr>
+		</table>
 
-			
-				<%#@list = current_user.follows.find(:all, :conditions => [ "follower_id = @user" ]) %>
-				<%@list = current_user.follows.collect(&:followed_id).each do |id| %>
-					
-				<%#@listss = current_user.follows.collect(&:f) %>
 
-				<% #unless @list.empty? %>
+				<%@list = current_user.follows.collect(&:followed_id).each_with_index do |id ,index| %>
 					<% @listss =Event.find_by_id(id)  %>
-					<table class="table table-striped">
-						<%= render @listss %>
+					<div >					<table class="table table-striped">
+						<%= render @listss , :index => index%>
 					</table>
 					<%#= will_paginate @listss %>
+				</div>
 				<% end %>
 			<!--
 				<%# unless @user.events.empty? %>
@@ -30,9 +29,9 @@
 					<%#= will_paginate @events %>
 				<%# end %>
 			-->
-			</td>	
-		</tr>
-	</table>
+			
+		
+	
 </div>
 
 <div class="sidebar round" style="float:right">
