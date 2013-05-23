@@ -32,5 +32,8 @@ def authorized_user
 redirect_to root_path unless current_user?(@event.user)
 end
 
-
+def eventv
+@events = Event.all
+render @events
+end	
 end

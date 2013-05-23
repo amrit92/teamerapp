@@ -1,14 +1,14 @@
 <% if signed_in? %>
 
 		
-				<div>		
+			<div class="span12">		
 					<h4><%= link_to 'Create Event', new_event_path %> </h4>
-					<br >	<br >	<br >
-				</div>
-
-				<%= render 'shared/user_info' %>
+					<div class="span9">
 				
-				<div>
+
+				<%#= render 'shared/user_info' %>
+				
+				
 					<%  @eventlist=Event.all %>
 					<% # @eventlist= @eventlist.paginate(:page => 1, :per_page => 2)%>
 				<% @eventlist.each_with_index do |vel,index|%>
@@ -21,9 +21,17 @@
 				<% end %>
 
 
-				</div>
+					</div>
+
+<div class="nav nav-tabs nav-stacked" >
+	<%= render 'layouts/sidebar'%>
+</div>
+
+
+			</div>
 
 	<%# fadsfds%>
+
 
 <% else %>
 	<div class="masthead">
