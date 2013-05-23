@@ -31,10 +31,13 @@
 	<%# fadsfds%>
 
 <% else %>
-	<h1>Sample App</h1>
+	<div class="masthead">
+	<h1>Teamer</h1>
 	<p>
-		This is the home page for the
-		 application.
+		Teamer provides a simple interface to create, join and invite to events. It helps you to team up and collaborate effortlessly to make ideas happen.
+	
+		Organisations, non-profits and infomal groups can now work seamlessly towards their goals.
 	</p>
-	<%= link_to "Sign up now!", signup_path, :class => "signup_button round" %>
+	</div>
+	<div class="btn btn-primary btn-large" style="float:center"> <%= link_to "Join now!", signup_path, :class => "signup_button round" %> </div>
 <% end %>

@@ -2,5 +2,5 @@
 <%= form_for(current_user.takens.find_by_taken_id(task.id),
 
     html: { :method => :delete }) do |f| %>
-	<%= f.submit "Leave" %>
+	<%= f.submit "Leave", :class=>"btn"%>
 <% end %>

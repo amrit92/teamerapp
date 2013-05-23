@@ -1,6 +1,18 @@
+<%= simple_form_for @task do |f| %>
+  <%= f.input :title%>
+  <%= f.input :description%>
+  Time <br>
+  <%= f.datetime_picker :date, :dateFormat => "yy-mm-dd " , :timeFormat=> "hh:mm tt z" %> <br>
+  <%= f.input :required%>
+
+	<%= f.hidden_field :event_id, :value => @event.id %>
+	<%= f.hidden_field :signedup, :value => 0 %>
 
 
+  <%= f.submit 'Create', :class => "btn btn-primary"%>
+<% end %>
 
+<!--
 <%= form_for @task do |f| %>
 
 	<%= render 'shared/error_messages', :object => f.object %>
@@ -31,3 +43,4 @@
 	<%= f.submit "Create task" %>
 	</div>
 <% end %>
+-->

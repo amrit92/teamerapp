@@ -16,6 +16,10 @@ class Event < ActiveRecord::Base
 	validates :user_id, :presence => true
 	default_scope :order =>	 'events.created_at DESC'
 
+	validates :title, :presence => true
+
+	validates :date, :presence => true
+
 	def following?(followed)
 		follows.find_by_followed_id(followed)
 	end

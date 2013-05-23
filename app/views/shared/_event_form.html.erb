@@ -1,11 +1,18 @@
+<%= simple_form_for @event do |f| %>
+  <%= f.input :title%>
+  <%= f.input :description%>
+  Time <br>
+  <%= f.datetime_picker :date, :dateFormat => "yy-mm-dd " , :timeFormat=> "hh:mm tt z" %> <br>
+  <%= f.submit 'Create', :class => "btn btn-primary"%>
+<% end %>
 
-
+<!--
 <%= form_for @event do |f| %>
 <%= render 'shared/error_messages', :object => f.object %>
-<!-- <div class="title"> -->
+ 
 	<%= f.label :title%>
 	<%= f.text_field :title %>
-<!-- </div> --> <br>
+  <br>
   Date and Time <br>
   <%= f.datetime_picker 'date', :dateFormat => "yy-mm-dd " , :timeFormat=> "hh:mm tt z" %>
 
@@ -19,3 +26,4 @@
 	<%= f.submit "Submit" %>
 </div>
 <% end %>
+-->

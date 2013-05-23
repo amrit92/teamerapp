@@ -1,42 +1,42 @@
+<div class="span12">
+	<div class="span9">
+		<table class="table table-hover">  <!-- class="profile" summary="Profile information"> -->
+			<tr>
 
-<div style="float:left">
-	<table class="table table-hover">  <!-- class="profile" summary="Profile information"> -->
-		<tr>
+				<td > <!--  class="main"> -->
+					<h1>
+						<%= gravatar_for @user %>
+						<%= @user.name %>
+					</h1>
 
-			<td > <!--  class="main"> -->
-				<h1>
-					<%= gravatar_for @user %>
-					<%= @user.name %>
-				</h1>
+				
+					<%#@list = current_user.follows.find(:all, :conditions => [ "follower_id = @user" ]) %>
+					<%@list = current_user.follows.collect(&:followed_id).each do |id| %>
+						
+					<%#@listss = current_user.follows.collect(&:f) %>
 
-			
-				<%#@list = current_user.follows.find(:all, :conditions => [ "follower_id = @user" ]) %>
-				<%@list = current_user.follows.collect(&:followed_id).each do |id| %>
-					
-				<%#@listss = current_user.follows.collect(&:f) %>
+					<% #unless @list.empty? %>
+						<% @listss =Event.find_by_id(id)  %>
+						<table class="table table-striped">
+							<%= render @listss %>
+						</table>
+						<%#= will_paginate @listss %>
+					<% end %>
+				<!--
+					<%# unless @user.events.empty? %>
+						<table class="table table-striped">
+							<%#= render @events %>
+						</table>
+						<%#= will_paginate @events %>
+					<%# end %>
+				-->
+				</td>	
+			</tr>
+		</table>
+	</div>
 
-				<% #unless @list.empty? %>
-					<% @listss =Event.find_by_id(id)  %>
-					<table class="table table-striped">
-						<%= render @listss %>
-					</table>
-					<%#= will_paginate @listss %>
-				<% end %>
-			<!--
-				<%# unless @user.events.empty? %>
-					<table class="table table-striped">
-						<%#= render @events %>
-					</table>
-					<%#= will_paginate @events %>
-				<%# end %>
-			-->
-			</td>	
-		</tr>
-	</table>
+	<div class="span3" style="float:right">
+		<%= render 'layouts/sidebar'%>
+	</div>
+
 </div>
-
-<div class="sidebar round" style="float:right">
-	<%= render 'layouts/sidebar'%>
-</div>
-
-

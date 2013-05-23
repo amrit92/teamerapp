@@ -26,6 +26,10 @@ class TasksController < ApplicationController
 			redirect_back_or root_path
 	end
 
+	def index
+		
+	end
+
 	def show
 		@tasks = current_user.doing_tasks.all
 	end
