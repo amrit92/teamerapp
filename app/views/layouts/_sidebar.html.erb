@@ -1,3 +1,4 @@
 <strong>Name</strong> <%= @user.name %><br><br>
 <strong>URL</strong> <%= link_to user_path(@user), @user %>   
-<strong>  Events </strong> <%= @user.events.count %>
+<p>  Events signedup :<%= @user.events.count %></p> 
+ <%= link_to 'My Tasks', task_path%>

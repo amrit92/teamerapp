@@ -1,0 +1,18 @@
+<table class="table table-striped">
+<% @tasks.each do |task| %>
+<tr>
+	<h4> <%= task.title %>  </h4>
+	<%= task.description %>  
+	<%= time_tag(task.date) %>				
+	Required : <%= task.required - task.users.count%>
+				
+	<p><small> Created <%= time_ago_in_words(task.created_at) %> ago. </small></p>
+	<%= render :partial => 'users/doform',:locals => { :task => task} if signed_in? %>
+	<% user = task.user rescue User.find(task.user_id)%>
+	<% if current_user?(user)%>
+		<%= link_to "delete task", task, :method => :delete,
+												:confirm => "You sure?",
+												:title => task.title%>
+	<% end %>
+</tr>	
+<%end%>

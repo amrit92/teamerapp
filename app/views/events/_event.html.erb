@@ -1,35 +1,39 @@
 <tr>
-	<td>
-		<h4 style = "display:inline"> <%= event.title %>  </h4> <p> <%= event.description %> </p>   
-		<p> <%= time_tag(event.date) %> </p>
-		<p><small> Created <%= time_ago_in_words(event.created_at) %> ago. </small></p>
+	
+		<h4 style = "display:inline"> <%= event.title %> :  </h4> 
+		<%= event.description %> <br>
+		<p>	On <%= time_tag(event.date) %>
+		<small> created <%= time_ago_in_words(event.created_at) %> ago. </small></p>
 
 	
 		<%= render :partial => 'users/follow_form',:locals => { :event => event} if signed_in? %>
-
 		<%= link_to 'Create Task', new_task_path(:id => event.id) %>
 			
 		<% unless event.tasks.empty? %>
-		<table summary="Event Tasks">
-			<%= event.tasks.each do |task| %>
+		
+		<table class="table table-striped">
+			<% event.tasks.each do |task| %>
 			<tr>
-				
-					<h4> <%= task.title %>  </h4> <p> <%= task.description %> </p>   
-					<p> <%= time_tag(event.date) %> </p>
-				
-				
-					Required : <%= task.required%> Signedup : <%= task.signedup%>
-				
-					<p><small> Created <%= time_ago_in_words(event.created_at) %> ago. </small></p>
-					<%= render :partial => 'users/doform',:locals => { :task => task} if signed_in? %>
+				<h4> <%= task.title %>  </h4>
+				<%= task.description %>  
+				<%= time_tag(event.date) %>				
+				Required : <%= task.required - task.users.count%>
+							
+				<p><small> Created <%= time_ago_in_words(event.created_at) %> ago. </small></p>
+				<%= render :partial => 'users/doform',:locals => { :task => task} if signed_in? %>
+				<% user = task.user rescue User.find(task.user_id)%>
+				<% if current_user?(user)%>
+					<%= link_to "delete task", task, :method => :delete,
+															:confirm => "You sure?",
+															:title => event.title%>
+				<% end %>
 			</tr>
-			<% end %>		
+			<% end %>
+			
+		</table>
+	<% end %>
 
-			</table>
-		<% end %>
-
-
-			<% user = event.user rescue User.find(event.user_id) %>
+		<% user = event.user rescue User.find(event.user_id) %>
 		<% if current_user?(user) %>
 
 		<td>
@@ -48,7 +52,3 @@
  
 
 
-
-
-
- 

@@ -2,8 +2,7 @@
 	<table  summary="For signed-in users">
 		<tr>
 			<td>
-				<h3>Create Events</h3>
-				<%= link_to 'Add a new Event', new_event_path %>
+				<h4><%= link_to 'Create Event', new_event_path %> </h4>
 				<br >
 				<br >
 				<br >
@@ -15,7 +14,7 @@
 				<%= render 'shared/user_info' %>
 			</td>
 			<td >
-				<p> List of Events </p>
+				<!-- <p> List of Events </p> -->
 			</td>
 				<%  @eventlist=Event.all %>
 				<% # @eventlist= @eventlist.paginate(:page => 1, :per_page => 2)%>

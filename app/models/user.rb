@@ -12,6 +12,7 @@ has_many :invites, :foreign_key =>"uid"
 has_many :takens, :foreign_key => "taker_id",
 				  :dependent => :destroy
 
+has_many :doing_tasks, :through => :takens, :source => :taken
 # has_many  :doing_tasks, :through => :takens, :source => :taken
 
 email_regex = /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i
@@ -70,8 +71,6 @@ def take!(taken)
 end
 
 def leave_task!(taken)
-	debugger
-	1
 	self.takens.find_by_id(taken).destroy
 	
 end

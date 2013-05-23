@@ -37,7 +37,7 @@ resources :invites, :only =>[:new, :create, :destroy]
 resources :takens, :only => [:create, :destroy]
 
 
-resources :tasks, :only => [:create, :destroy, :new] do
+resources :tasks, :only => [:create, :destroy, :new, :show] do
   member do
     post :taken
   end

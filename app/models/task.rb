@@ -1,11 +1,14 @@
-class Task < ActiveRecord::Base
+  class Task < ActiveRecord::Base
   attr_accessible :date, :description, :event_id, :required, :title, :user_id, :signedup
 
-  belongs_to :event, :dependent => :destroy
-  has_many :users, :dependent => :destroy
+  belongs_to :event #:dependent => :destroy
+  has_many :users, :through => :takens, :source => :taker
 
   has_many :takens, :foreign_key => "taken_id",
 					:dependent => :destroy
+
+  has_many :doing_tasks, :through => :relationships, :source => :taken
+
 
   default_scope :order => 'tasks.created_at DESC'
 
