@@ -20,7 +20,7 @@
 
 
 		<% unless event.tasks.empty? %>			
-		<div id="tasks<%= index %>"	>
+		<div class="task_list"id="tasks<%= index %>"	>
 
 				<% event.tasks.each_with_index do |task, index| %>
 					
@@ -38,8 +38,9 @@
    				<!-- <i class="icon-time"> </i> <small> <%= time_ago_in_words(event.created_at) %> ago. </small> -->
    				 <%= render :partial => 'users/doform',:locals => { :task => task}  if signed_in? %>
    				</p>
+   				<% end %>
    	</div>
 			
-		<% end %>
+		
 
 			<%end%>
