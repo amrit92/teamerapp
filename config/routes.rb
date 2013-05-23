@@ -1,4 +1,8 @@
 Blog::Application.routes.draw do
+ # get "invites/new"
+
+#  get "invites/new"
+
   #get "sessions/new"
 
   #get "users/new"
@@ -29,7 +33,7 @@ end
 resources :sessions, :only => [:new, :create, :destroy]
 resources :events, :only => [:new, :create, :destroy] 
 resources :follows, :only => [:create, :destroy]
-
+resources :invites, :only =>[:new, :create, :destroy]
 resources :takens, :only => [:create, :destroy]
 
 

@@ -36,6 +36,8 @@
 			<%= link_to "delete", event, :method => :delete,
 										 :confirm => "You sure?",
 										 :title => event.title %>
+
+			<%= link_to "invite",new_invite_path(:id =>event.id) %>
 		</td>
 		<% end %>
 

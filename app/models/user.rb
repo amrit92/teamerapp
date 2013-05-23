@@ -6,7 +6,7 @@ attr_accessible :name, :email, :password, :password_confirmation
 has_many :events, :dependent => :destroy
 has_many :tasks, :dependent => :destroy
 has_many :follows, :foreign_key => "follower_id", :dependent => :destroy
-
+has_many :invites, :foreign_key =>"uid"
 
 
 has_many :takens, :foreign_key => "taker_id",
@@ -47,6 +47,14 @@ end
 def followfind(follower)
 	return follows.find_by_followed_id(follower)
 
+end
+
+def invitesend(eve)
+	invites.create(:eid => :eve.id)
+end
+
+def uninvite!(followed)
+	invites.find_by_invite_id(followed).destroy
 end
 
 def taken?(task)
