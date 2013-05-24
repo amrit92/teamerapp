@@ -3,7 +3,7 @@
   <% if current_user.following?(event) %>
   	
     <%= render :partial => 'users/unfollow',:locals => {:event => event} %>	
-	</div>
+	
   <% else %>
   	
     <%= render :partial => 'users/follow', :locals => { :event => event} %>

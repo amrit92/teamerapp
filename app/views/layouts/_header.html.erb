@@ -4,8 +4,9 @@
   	<div class="nav nav-pills pull-right">
     
 			<!-- <ul class> -->
-
-				<li> <%= link_to 'Teamer', root_path %></li>
+				<div class="brand">
+				<li style="font color=yellow"> <%= link_to 'Teamer', root_path %></li>
+				</div>
 				<% if signed_in? %>
 					<li><%= link_to "Profile", current_user %></li>
 					<li><%= link_to "Settings", edit_user_path(current_user) %></li>

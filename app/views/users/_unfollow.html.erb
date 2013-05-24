@@ -1,6 +1,5 @@
 
 <%= form_for(current_user.follows.find_by_followed_id(event),
-    html: { :method => :delete }) do |f| %>
+    html: { :method => :delete , :style => 'margin:0px;' }) do |f| %>
 <%= f.submit "Unfollow", :class => "btn" %>
-
 <% end %>
