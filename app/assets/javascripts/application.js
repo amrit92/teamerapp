@@ -16,11 +16,10 @@
 //= require jquery
 //= require jquery_ujs
 //= require jquery-ui
-//= require jquery-ui-timepicker-addon.js
+
 //= require bootstrap
 //= require_tree .
-
-
+//= require bootstrap-datetimepicker
  $(function() {
 
  $('[id^="tasks"]').hide();
@@ -28,4 +27,15 @@
    $(jQuery(this).parent().siblings('[id^="tasks"]').toggle("blind", {}, 500));
    return false;
  });
+
+$('#datetimepicker1').datetimepicker({
+       maskInput: true,           // disables the text input mask
+  pickDate: true,            // disables the date picker
+  pickTime: true,            // disables de time picker
+  pick12HourFormat: true,   // enables the 12-hour format time picker
+  pickSeconds: true,         // disables seconds in the time picker
+  startDate: -Infinity,      // set a minimum date
+  format: 'dd/MM/yyyy hh:mm:ss',
+  endDate: Infinity  
+    });
 });

@@ -1,8 +1,18 @@
 <%= simple_form_for @task do |f| %>
   <%= f.input :title%>
   <%= f.input :description%>
-  Time <br>
-  <%= f.datetime_picker :date, :dateFormat => "yy-mm-dd " , :timeFormat=> "hh:mm tt z" %> <br>
+  Date <br>
+  <%#= f.datetime_picker :date, :dateFormat => "yy-mm-dd " , :timeFormat=> "hh:mm tt z" %> 
+  <div id="datetimepicker1" class="input-append date">
+  <%= f.text_field :date  %>
+    <span class="add-on">
+      <i data-time-icon="icon-time" data-date-icon="icon-calendar">
+        </i>
+      </span>
+    
+  </div><br ><br >
+
+
   <%= f.input :required%>
 
 	<%= f.hidden_field :event_id, :value => @event.id %>
