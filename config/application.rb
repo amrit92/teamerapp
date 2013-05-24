@@ -42,6 +42,7 @@ module Blog
     config.assets.compile = true
 
     config.assets.precompile += %w( *.css )
+    config.assets.precompile += %w( *.js )
     config.assets.precompile += %w( bootstrap.min.css )
     config.assets.precompile += %w( bootstrap-responsive.min.css )
      config.assets.precompile += %w( custom.css )
