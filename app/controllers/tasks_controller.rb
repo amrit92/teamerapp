@@ -13,7 +13,7 @@ class TasksController < ApplicationController
 			#flash[:success] = "New Task Created"
 			redirect_to root_path
 		else
-			redirect_to 'pages/home'
+			render new_task_path
 		end
 	end
 
