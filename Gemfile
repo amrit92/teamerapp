@@ -17,7 +17,7 @@ end
 gem 'gravatar_image_tag'
 gem 'therubyracer'
 gem 'simple_form'
-gem 'bootstrap-sass'
+#gem 'bootstrap-sass'
 gem 'binding_of_caller'
 
 gem 'binding_of_caller'
@@ -31,8 +31,8 @@ group :assets do
   # See https://github.com/sstephenson/execjs#readme for more supported runtimes
   # gem 'therubyracer', :platforms => :ruby
   gem 'debugger'
-  gem 'uglifier', '>= 1.0.3'
-  gem 'better_errors'
+  gem 'uglifier', '>= 1.0.3' 
+ gem 'better_errors'
   gem 'faker'
   gem 'will_paginate'
 end
