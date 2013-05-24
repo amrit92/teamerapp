@@ -1,18 +1,37 @@
-<table class="table table-striped">
-<% @tasks.each do |task| %>
-<tr>
-	<h4> <%= task.title %>  </h4>
-	<%= task.description %>  
-	<%= time_tag(task.date) %>				
-	Required : <%= task.required - task.users.count%>
-				
-	<p><small> Created <%= time_ago_in_words(task.created_at) %> ago. </small></p>
-	<%= render :partial => 'users/doform',:locals => { :task => task} if signed_in? %>
-	<% user = task.user rescue User.find(task.user_id)%>
-	<% if current_user?(user)%>
-		<%= link_to "delete task", task, :method => :delete,
-												:confirm => "You sure?",
-												:title => task.title%>
-	<% end %>
-</tr>	
-<%end%>
+<div class="span9">
+<% if @tasks.empty? %>
+	<h2 style="display:inline"> <%= current_user.name%></h2><br><br>
+	<p> You have not signed up for any tasks. Do so here @ <%= link_to 'All Events', root_path%> </p>
+
+<% else%>			
+	
+	<h2 style="display:inline"> <%= current_user.name%></h2><br>
+	<p> You have signed up for the following tasks </p>
+	<br><br>
+
+	<% @tasks.each do |task| %>
+		
+
+
+		<h4 style="display:inline"> <%= task.title %> </h4> of event <h4 style="display:inline"> <% event = Event.find_by_id(task.event_id)%> <%= event.title%> </h4>
+   	<div class="description"> <p style="display:inline"> <%= task.description %> <br> </div>
+   	<i class="icon-user"> </i> <%= task.required - task.users.count%>  Required &nbsp
+   	<i class="icon-globe"> </i> On <%= time_tag(task.date) %> 
+						
+   	<% user = task.user rescue User.find(task.user_id)%>
+   	<% if current_user?(user)%>
+	  	<i class="icon-trash"> </i> 
+	  	<%= link_to "Delete", task, :method => :delete, :confirm => "You sure?",    :title => task.title%> &nbsp
+   	<% end %>
+   			
+
+   	<%= render :partial => 'users/doform',:locals => { :task => task}  if signed_in? %>
+   	</p>
+   	<hr>
+<% end %>
+<% end %>
+</div>
+
+<br>
+<br>
+<br>

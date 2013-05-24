@@ -11,12 +11,12 @@ def create
 @event = current_user.events.build(params[:event])
 
 	if @event.save
-		flash[:success] = "Event created!"
+		#flash[:success] = "Event created!"
 		redirect_to root_path
 		@current_user.followevent!(@event)
 	else
-		flash[:error] = "Failed to create"
-		render 'pages/home'
+		#flash[:error] = "Failed to create"
+		render new_event_path
 	end
 end
 

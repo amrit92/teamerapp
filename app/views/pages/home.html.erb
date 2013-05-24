@@ -8,7 +8,8 @@
 			<p> Checkout various events you want to contribute, below.</p>
 			
 			<h4> <i class="icon-pencil"> </i> <%= link_to 'Create Event', new_event_path %> &nbsp
-				<i class = "icon-list"> </i> <%= link_to 'Your Events', user_path(current_user)%>
+				<i class = "icon-list"> </i> <%= link_to 'Your Events', user_path(current_user)%> &nbsp
+				<i class= "icon-ok">  </i><%= link_to ' Your Tasks', task_path(@current_user)%>
 			</h4>
 				
 			<hr>
@@ -33,6 +34,10 @@
 	<%= render 'layouts/sidebar'%>
 </div>
  -->
+
+ 				<br>
+<br>
+<br>
 
 			</div>
 
