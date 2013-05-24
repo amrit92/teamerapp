@@ -7,7 +7,14 @@ gem 'rails', '3.2.13'
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
 gem 'bootstrap-datetimepicker-rails'
-gem 'sqlite3'
+group :production, :staging do
+  gem "pg", '0.15.1'
+end
+
+group :development, :test do
+  gem "sqlite3"
+end
+
 gem 'therubyracer'
 gem 'simple_form'
 gem 'bootstrap-sass'
