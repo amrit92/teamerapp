@@ -48,6 +48,8 @@ blueprint/plugins/rtl/readme.txt: blueprint/plugins/rtl/readme-7849adaa555f845d2
 blueprint/plugins/rtl/readme/index.txt: blueprint/plugins/rtl/readme-7849adaa555f845d28c4696ca45f79ff.txt
 blueprint/src/grid.png: blueprint/src/grid-de7b2a746dc9b53859b8a6ba7474af0f.png
 blueprint/src/grid/index.png: blueprint/src/grid-de7b2a746dc9b53859b8a6ba7474af0f.png
+bootstrap-responsive.min.css: bootstrap-responsive.min-54b9bd6a0c668cc457727397ac34b6b8.css
+bootstrap-responsive/index.min.css: bootstrap-responsive.min-54b9bd6a0c668cc457727397ac34b6b8.css
 bootstrap.css: bootstrap-c602ab5ef68ea053cbc38a2431a1d7e0.css
 bootstrap/index.css: bootstrap-c602ab5ef68ea053cbc38a2431a1d7e0.css
 bootstrap.min.css: bootstrap.min-094af85ae7fa0056c93dff6fb5167508.css
