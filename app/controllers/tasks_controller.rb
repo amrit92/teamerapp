@@ -10,7 +10,7 @@ class TasksController < ApplicationController
 	def create
 		@task = current_user.tasks.build(params[:task])
 		if @task.save
-			flash[:success] = "New Task Created"
+			#flash[:success] = "New Task Created"
 			redirect_to root_path
 		else
 			redirect_to 'pages/home'

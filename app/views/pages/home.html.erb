@@ -1,15 +1,21 @@
 <% if signed_in? %>
 
 		
-				<div>		
-					<h4><%= link_to 'Create Event', new_event_path %> </h4>
-					<br >	<br >	<br >
-				</div>
+	<div class="span12">		
+		<div class="span9">
 
-				<%= render 'shared/user_info' %>
+			<h2 style="display:inline"> Welcome, <%= current_user.name%></h2><br>
+			<p> Checkout various events you want to contribute, below.</p>
+			
+			<h4> <i class="icon-pencil"> </i> <%= link_to 'Create Event', new_event_path %> &nbsp
+				<i class = "icon-list"> </i> <%= link_to 'Your Events', user_path(current_user)%>
+			</h4>
 				
-				<div>
-					<%  @eventlist=Event.all %>
+			<hr>
+
+				<%#= render 'shared/user_info' %>
+								
+				<%  @eventlist=Event.all %>
 					<% # @eventlist= @eventlist.paginate(:page => 1, :per_page => 2)%>
 				<% @eventlist.each_with_index do |vel,index|%>
 					<div>
@@ -21,9 +27,17 @@
 				<% end %>
 
 
-				</div>
+					</div>
+
+<!-- <div class="nav nav-tabs nav-stacked" >
+	<%= render 'layouts/sidebar'%>
+</div>
+ -->
+
+			</div>
 
 	<%# fadsfds%>
+
 
 <% else %>
 	<div class="masthead">

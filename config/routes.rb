@@ -6,7 +6,7 @@ Blog::Application.routes.draw do
   #get "sessions/new"
 
   #get "users/new"
-
+get  "pages/eventv"
   get "pages/home"
 
   get "pages/contact"
@@ -31,7 +31,7 @@ resources :users do
 end
 
 resources :sessions, :only => [:new, :create, :destroy]
-resources :events, :only => [:new, :create, :destroy] 
+resources :events, :only => [:new, :create, :destroy, :show] 
 resources :follows, :only => [:create, :destroy]
 resources :invites, :only =>[:new, :create, :destroy]
 resources :takens, :only => [:create, :destroy]
@@ -108,10 +108,9 @@ match '/signout', :to => 'sessions#destroy'
   # This is a legacy wild controller route that's not recommended for RESTful applications.
   # Note: This route will make all actions in every controller accessible via GET requests.
   # match ':controller(/:action(/:id))(.:format)'
-
 match '/contact', :to => 'pages#contact'
 match '/about',:to => 'pages#about'
 match '/help',:to => 'pages#help'
-
+match '/eventv',:to => 'pages#eventv'
 end
 

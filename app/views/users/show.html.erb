@@ -1,17 +1,17 @@
 <div class="span12">
 	<div class="span9">
-		<table class="table table-hover">  <!-- class="profile" summary="Profile information"> -->
-			<tr>
 
-			<td > <!--  class="main"> -->
-				<h1>
-					<%= gravatar_for @user %>
-					<%= @user.name %>
-				</h1>
-			</td>	
-		</tr>
-		</table>
+				<h3> You are following <%= pluralize(current_user.follows.count, "event")%>
+						 and have signed up for <%= pluralize(current_user.doing_tasks.count,"task") %></h3>
+				
+				<h4> <i class="icon-pencil"> </i> <%= link_to 'Create Event', new_event_path %> &nbsp
+					<i class = "icon-list"> </i> <%= link_to 'All Events', root_path%>
+				</h4>
 
+				<hr>
+
+
+			
 
 				<%@list = current_user.follows.collect(&:followed_id).each_with_index do |id ,index| %>
 					<% @listss =Event.find_by_id(id)  %>
@@ -29,14 +29,12 @@
 					<%#= will_paginate @events %>
 				<%# end %>
 			-->
-			
-		
 	
 </div>
-
-<div class="" style="float:right">
+<!-- 
+<div class="nav nav-tabs nav-stacked" >
 	<%= render 'layouts/sidebar'%>
-</div>
+</div> -->
 
 
 

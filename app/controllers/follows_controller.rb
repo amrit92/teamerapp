@@ -8,6 +8,6 @@ class FollowsController < ApplicationController
 	def destroy
 		@event = Follow.find(params[:id]).followed
 		current_user.unfollow!(@event)
-		redirect_to @current_user
+		redirect_to root_path
 	end
 end

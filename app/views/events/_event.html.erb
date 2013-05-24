@@ -1,0 +1,46 @@
+<div >
+		<h4 style="display:inline" id="event<%=index%>"> <%= event.title %>  </h4> <br> 
+		<p style="display:inline"><%= event.description %> <br>
+   		<i class="icon-globe"> </i> On <%= time_tag(event.date) %> <br>
+		<i class="icon-plus-sign"> </i>	<%= link_to " Task ", new_task_path(:id => event.id), :class=> "mylink"%>  
+
+			<% user = event.user rescue User.find(event.user_id) %>
+		   <% if current_user?(user) %>
+		 	<i class="icon-trash"> </i> <%= link_to "  Delete", event, :method => :delete, :confirm => "You sure?", :title => event.title, :class => "mylink" %>
+			   	 <%#= link_to "Invite People",new_invite_path(:id =>event.id), :class => "btn"%>   	 
+			<% end %>
+			<i class="icon-time"> </i> <small style="display:inline"> <%= time_ago_in_words(event.created_at) %> ago. </small>
+
+		<%= render :partial => 'users/follow_form',:locals => { :event => event} if signed_in? %>
+
+
+		</p>
+</div>
+
+
+		<% unless event.tasks.empty? %>			
+		<div class="task_list"id="tasks<%= index %>"	>
+
+				<% event.tasks.each_with_index do |task, index| %>
+					
+
+					<h4 style="display:inline"> <%= task.title %> : </h4> 
+   			 	<p style="display:inline"> <%= task.description %> <br> 
+   			 	<i class="icon-user"> </i> <%= task.required - task.users.count%>  Required &nbsp
+   			 	<i class="icon-globe"> </i> On <%= time_tag(event.date) %> 
+						
+   				<% user = task.user rescue User.find(task.user_id)%>
+   				<% if current_user?(user)%>
+	   				<i class="icon-trash"> </i> 
+	   				<%= link_to "Delete", task, :method => :delete, :confirm => "You sure?",    :title => event.title%> &nbsp
+   				<% end %>
+   				<!-- <i class="icon-time"> </i> <small> <%= time_ago_in_words(event.created_at) %> ago. </small> -->
+   				 <%= render :partial => 'users/doform',:locals => { :task => task}  if signed_in? %>
+   				</p>
+   				<hr>
+   				<% end %>
+   	</div>
+			
+		
+
+			<%end%>
