@@ -1,6 +1,6 @@
 module SessionsHelper
   def sign_in(user)
-    cookies.permanent.signed[:remember_token] = [user.id, user.salt]
+    cookies.permanent.signed[:remember_token] = [user.id]#, user.salt]
     self.current_user = user
   end
   
@@ -46,7 +46,7 @@ end
     end
     
     def remember_token
-      cookies.signed[:remember_token] || [nil, nil]
+      cookies.signed[:remember_token] || [nil]#, nil]
     end
     def store_location
 		session[:return_to] = request.fullpath

@@ -23,7 +23,7 @@ group :assets do
 
   # See https://github.com/sstephenson/execjs#readme for more supported runtimes
   # gem 'therubyracer', :platforms => :ruby
-
+  gem 'debugger'
   gem 'uglifier', '>= 1.0.3'
   gem 'gravatar_image_tag', '1.0.0.pre2'
   gem 'better_errors'
@@ -51,6 +51,6 @@ gem 'jquery_datepicker'
 # gem 'capistrano'
 
 # To use debugger
- gem 'debugger'
+ 
 
 
