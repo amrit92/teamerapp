@@ -41,10 +41,8 @@ module Blog
 
     config.assets.compile = true
 
-    config.assets.precompile += %w( bootstrap.css )
-    config.assets.precompile += %w( bootstrap.min.css )
-    config.assets.precompile += %w( bootstrap-responsive.min.css )
-     config.assets.precompile += %w( custom.css )
+    config.assets.precompile += %w( *.css, *.js , *.scss )
+
 
     # Configure sensitive parameters which will be filtered from the log file.
     config.filter_parameters += [:password]
