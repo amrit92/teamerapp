@@ -8,7 +8,7 @@ gem 'rails', '3.2.13'
 
 gem 'bootstrap-datetimepicker-rails'
 group :production, :staging do
-  gem "pg", '0.15.1'
+  gem "pg"
 end
 
 group :development, :test do
