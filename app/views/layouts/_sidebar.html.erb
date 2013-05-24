@@ -1,0 +1,7 @@
+
+
+<h2> <%= current_user.name%>  </h2>
+<h5>
+	<%= link_to user_path(current_user), current_user %>  <br>
+	Signedup <%= pluralize(current_user.events.count, "event") %> <br>
+</h5>
