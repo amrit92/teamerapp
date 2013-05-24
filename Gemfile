@@ -14,7 +14,7 @@ end
 group :development, :test do
   gem "sqlite3"
 end
-
+gem 'gravatar_image_tag'
 gem 'therubyracer'
 gem 'simple_form'
 gem 'bootstrap-sass'
@@ -32,7 +32,6 @@ group :assets do
   # gem 'therubyracer', :platforms => :ruby
   gem 'debugger'
   gem 'uglifier', '>= 1.0.3'
-  gem 'gravatar_image_tag', '1.0.0.pre2'
   gem 'better_errors'
   gem 'faker'
   gem 'will_paginate'
