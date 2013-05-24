@@ -41,7 +41,7 @@ module Blog
 
     config.assets.compile = true
 
-    config.assets.precompile += %w( *.css, *.js , *.scss )
+    config.assets.precompile += [ "*.css", "*.js" , "*.scss" ]
 
 
     # Configure sensitive parameters which will be filtered from the log file.
