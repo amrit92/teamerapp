@@ -10,9 +10,9 @@
 		 	<i class="icon-trash"> </i> <%= link_to "  Delete", event, :method => :delete, :confirm => "You sure?", :title => event.title, :class => "mylink" %>
 			   	 <%#= link_to "Invite People",new_invite_path(:id =>event.id), :class => "btn"%>   	 
 			<% end %>
-			<i class="icon-time"> </i> <small> <%= time_ago_in_words(event.created_at) %> ago. </small>
+			<i class="icon-time"> </i> <small style="display:inline"> <%= time_ago_in_words(event.created_at) %> ago. </small>
 
-		<%= render :partial => 'users/follow_form',:locals => { :event => event}, :class => "inline" if signed_in? %>
+		<%= render :partial => 'users/follow_form',:locals => { :event => event} if signed_in? %>
 
 
 		</p>
@@ -38,6 +38,7 @@
    				<!-- <i class="icon-time"> </i> <small> <%= time_ago_in_words(event.created_at) %> ago. </small> -->
    				 <%= render :partial => 'users/doform',:locals => { :task => task}  if signed_in? %>
    				</p>
+   				<hr>
    				<% end %>
    	</div>
 			
