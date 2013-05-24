@@ -9,7 +9,7 @@ gem 'rails', '3.2.13'
 gem 'sqlite3'
 gem 'therubyracer'
 gem 'simple_form'
-gem 'bootstrap-sass'
+#gem 'bootstrap-sass'
 gem 'binding_of_caller'
 
 gem 'binding_of_caller'
