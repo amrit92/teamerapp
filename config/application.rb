@@ -47,7 +47,7 @@ module Blog
     config.assets.precompile += %w( bootstrap-responsive.min.css )
      config.assets.precompile += %w( bootstrap-datetimepicker.css )
      config.assets.precompile += %w( bootstrap-datetimepicker.js )
-     
+         config.assets.precompile += %w( application.js )
 
      config.assets.precompile += %w( custom.css )
 
