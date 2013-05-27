@@ -13,7 +13,8 @@ end
   def show
   	@user = User.find(params[:id])
     #@create_task = Task.new
-    @events = @user.events.paginate(:page => params[:page]) unless @user.events.empty?
+    #@events = @user.events.paginate(:page => params[:page]) unless @user.events.empty?
+    @events = @user.events
     @title = @user.name
     
   end
