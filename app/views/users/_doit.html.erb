@@ -1,7 +1,7 @@
 
 <%= form_for(current_user.takens.build(:taken_id => task.id), html: { :style => 'margin:0px;' }) do |f| %>
 	<%= f.hidden_field :taken_id %>
-	<%= f.submit "Do", :class=> "btn" %>
+	<%= f.submit "Do", :class=> "btn btn-success" %>
 <% end %>
 
 

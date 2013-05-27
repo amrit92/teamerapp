@@ -1,4 +1,4 @@
 <%= form_for( current_user.follows.build(:followed_id => event.id), html: { :style => 'margin:0px;' }) do |f| %>
 	<%= f.hidden_field :followed_id %>
-	<%= f.submit "Follow", :class => "btn" %>
+	<%= f.submit "Follow", :class => "btn btn-info" %>
 <% end %>

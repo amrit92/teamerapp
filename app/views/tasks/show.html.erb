@@ -1,14 +1,14 @@
 <div class="span9">
 <% if @tasks.empty? %>
-	<h1 style="display:inline"> <%= current_user.name%></h1>
+	<h3 style="display:inline"> <%= current_user.name%></h3>
 	<hr>
 	<p> You have not signed up for any tasks. Do so here @ <%= link_to 'All Events', root_path%> </p>
 
 <% else%>			
 	
-	<h2 style="display:inline"> <%= current_user.name%></h2><br>
-	<p> You have signed up for the following tasks </p>
-	<br><br>
+	<h3 style="display:inline"> <%= current_user.name%></h3><br>
+	<p> You have signed up for the following tasks. </p>
+	<hr>
 
 	<% @tasks.each do |task| %>
 		

@@ -3,7 +3,7 @@ class FollowsController < ApplicationController
 	def create
 		@event = Event.find(params[:follow][:followed_id])
 		current_user.followevent!(@event)
-		redirect_to @current_user
+		redirect_to root_path
 	end
 	def destroy
 		@event = Follow.find(params[:id]).followed
