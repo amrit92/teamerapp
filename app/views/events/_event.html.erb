@@ -7,7 +7,12 @@
 		<div class="description"> <p style="display:inline"><%= event.description %> <br> </div>
    		<!-- <i class="icon-globe"> </i>  -->On <%= time_tag(event.date) %> 
    		<!-- <i class="icon-star"> </i>  --> <small> and has </small> <%= pluralize(event.tasks.count,"task") %><br>
+
+   		<% homeevent = Event.find_by_id(event.id)%>
+   				<% creator_user = User.find(homeevent.user_id)%>
+   				<% if current_user?(user) || current_user?(creator_user)%>
 		<i class="icon-plus-sign"> </i>	<%= link_to " Task ", new_task_path(:id => event.id), :class=> "mylink"%>  
+		<% end %>
 
 			
 		   <% if current_user?(user) %>
