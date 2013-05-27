@@ -29,9 +29,9 @@
 
 
 					</div>
-
+				
 <!-- <div class="nav nav-tabs nav-stacked" >
-	<%= render 'layouts/sidebar'%>
+	<%# render 'layouts/sidebar'%>
 </div>
  -->
 
@@ -45,13 +45,19 @@
 
 
 <% else %>
-	<div class="masthead">
-	<h1>Teamer</h1>
-	<p>
-		Teamer provides a simple interface to create, join and invite to events. It helps you to team up and collaborate effortlessly to make ideas happen.
-	
-		Organisations, non-profits and infomal groups can now work seamlessly towards their goals.
-	</p>
+	<div style="text-align:center;">
+		<div class="masthead">
+			<h1 style="font-size:70px;"><i>MI</i> Teamer</h1>
+			<hr>
+			<p>
+				Teamer provides a simple interface to create, join and invite to events. It helps you to team up and collaborate effortlessly to make ideas happen.
+			
+				Organisations, non-profits and infomal groups can now work seamlessly towards their goals.
+			</p>
+		</div>
+		<br>
+		<div class="btn btn-success btn-small" style="text-align:center;"> 
+			<%= link_to "Join now!", signup_path, :class => "signup_button round", :style => 'font-size:20px; text-decoration:none;' %> 
+		</div>
 	</div>
-	<div class="btn btn-primary btn-large" style="float:center"> <%= link_to "Join now!", signup_path, :class => "signup_button round" %> </div>
 <% end %>

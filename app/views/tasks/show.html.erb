@@ -1,6 +1,7 @@
 <div class="span9">
 <% if @tasks.empty? %>
-	<h2 style="display:inline"> <%= current_user.name%></h2><br><br>
+	<h1 style="display:inline"> <%= current_user.name%></h1>
+	<hr>
 	<p> You have not signed up for any tasks. Do so here @ <%= link_to 'All Events', root_path%> </p>
 
 <% else%>			
