@@ -3,9 +3,10 @@
 
 				<h3> You are following <%= pluralize(current_user.follows.count, "event")%>
 						 and have signed up for <%= pluralize(current_user.doing_tasks.count,"task") %></h3>
-				<hr>
-				<h4> <i class="icon-pencil"> </i> <%= link_to 'Create Event', new_event_path %> &nbsp
+				
+				<h4> 
 					<i class = "icon-list"> </i> <%= link_to 'All Events', root_path%>
+					<span class="pull-right"><i class="icon-pencil"> </i> <%= link_to 'Create Event', new_event_path %></span>
 				</h4>
 
 				<hr class="main_line">

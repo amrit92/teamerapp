@@ -2,7 +2,6 @@ class TasksController < ApplicationController
 
 #before_filter signed_in?   && belongs_to_event??
 	def new
-
 		@event = Event.find(params[:id]) 
 		@task = Task.new # if signed_in?
 	end
@@ -13,7 +12,9 @@ class TasksController < ApplicationController
 			#flash[:success] = "New Task Created"
 			redirect_to root_path
 		else
-			render new_task_path
+			event_id = params[:task][:event_id]
+			@event = Event.find(event_id)
+			render 'new'
 		end
 	end
 

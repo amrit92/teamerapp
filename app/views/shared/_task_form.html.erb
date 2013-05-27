@@ -1,4 +1,4 @@
-<%= simple_form_for @task do |f| %>
+	<%= simple_form_for @task do |f| %>
   <%= f.input :title%>
   <%= f.input :description%>
   *Date <br>
@@ -13,7 +13,7 @@
   </div><br ><br >
 
 
-  <%= f.input :required%>
+  <%= f.input :required, :label => "Required Members" %>
 
 	<%= f.hidden_field :event_id, :value => @event.id %>
 	<%= f.hidden_field :signedup, :value => 0 %>
