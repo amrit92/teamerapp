@@ -3,7 +3,8 @@ class TakensController < ApplicationController
 	def create
 		@task = Task.find(params[:taken][:taken_id])
 		current_user.take!(@task)
-		redirect_to @current_user
+		redirect_to event_path(@task.event_id)
+		#redirect_to @current_user
 	end
 	def destroy
 
@@ -13,6 +14,7 @@ class TakensController < ApplicationController
 		#@task = Task.find(:taken_id)
 		
 		current_user.leave_task!(params[:id])
+		#redirect_to event_path((@taken.taken_id).event_id)
 		redirect_to @current_user
 	end
 end
