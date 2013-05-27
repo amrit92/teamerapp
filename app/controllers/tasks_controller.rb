@@ -11,7 +11,7 @@ class TasksController < ApplicationController
 		@task = current_user.tasks.build(params[:task])
 		if @task.save
 			#flash[:success] = "New Task Created"
-			redirect_to root_path
+			redirect_to event_path(@task.event_id)
 		else
 			render new_task_path
 		end

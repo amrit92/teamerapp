@@ -1,5 +1,6 @@
+<% index |= 1 %>
 <div > 
-		<h4 style="display:inline" id="event<%=index%>"> <%= event.title %>  <i class=" icon-arrow-down"> </i> </h4> 
+		<h4 style="display:inline;cursor:pointer;" id="event<%=index%>"> <%= event.title %>  <i class=" icon-arrow-down"> </i> </h4> 
 
 		<small> by <% user = event.user rescue User.find(event.user_id) %> <%= user.name%> </small>
 

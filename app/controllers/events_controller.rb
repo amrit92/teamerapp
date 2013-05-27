@@ -1,5 +1,5 @@
 class EventsController < ApplicationController
-before_filter :authenticate, :only => [:create, :destroy]
+before_filter :authenticate, :only => [:create, :show, :destroy]
 #before_filter :creator_user, :only => :destroy
 
 
@@ -12,7 +12,7 @@ def create
 
 	if @event.save
 		#flash[:success] = "Event created!"
-		redirect_to root_path
+		redirect_to event_path(@event)
 		@current_user.followevent!(@event)
 	else
 		#flash[:error] = "Failed to create"
@@ -33,8 +33,11 @@ def followshow
 end
 
 def show
+	#flash[:success] = "Event "
 	@event = Event.find(params[:id])
-	@events = @user.events.paginate(:page => params[:page])
+	@events = @user.events
+
+	#@events = @user.events.paginate(:page => params[:page])
 	@title = @user.name
 end
 
