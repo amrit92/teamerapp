@@ -45,11 +45,11 @@ module Blog
     config.assets.precompile += %w( *.js )
     config.assets.precompile += %w( bootstrap.min.css )
     config.assets.precompile += %w( bootstrap-responsive.min.css )
-     config.assets.precompile += %w( bootstrap-datetimepicker.css )
-     config.assets.precompile += %w( bootstrap-datetimepicker.js )
-         config.assets.precompile += %w( application.js )
+    config.assets.precompile += %w( bootstrap-datetimepicker.css )
+    config.assets.precompile += %w( bootstrap-datetimepicker.js )
+    config.assets.precompile += %w( application.js )
 
-     config.assets.precompile += %w( custom.css )
+    config.assets.precompile += %w( custom.css )
 
     # Configure sensitive parameters which will be filtered from the log file.
     config.filter_parameters += [:password]
