@@ -6,6 +6,14 @@ gem 'rails', '3.2.13'
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
+
+
+gem "vanity"
+
+#gem "redis"
+
+# Before A/B testing
+
 gem 'bootstrap-datetimepicker-rails'
 group :production, :staging do
   gem "pg"
@@ -14,6 +22,7 @@ end
 group :development, :test do
   gem "sqlite3"
 end
+
 gem 'gravatar_image_tag'
 gem 'therubyracer'
 gem 'simple_form'
@@ -56,6 +65,4 @@ gem 'jquery_datepicker'
 # gem 'capistrano'
 
 # To use debugger
- 
-
 

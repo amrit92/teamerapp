@@ -1,4 +1,7 @@
 class ApplicationController < ActionController::Base
+
+	use_vanity :current_user
+
   protect_from_forgery
   include SessionsHelper
 

@@ -25,15 +25,16 @@ end
 end
 
 def create
-@user = User.new(params[:user])
-if @user.save
-sign_in @user
-flash[:success] = "Welcome to the Sample App!"
-redirect_to @user
-else
-@title = "Sign up"
-render 'new'
-end
+  @user = User.new(params[:user])
+  if @user.save
+    track! :signup      # track successful sign up
+    sign_in @user
+
+    redirect_to @user
+  else
+    @title = "Sign up"
+    render 'new'
+  end
 end
 
 
