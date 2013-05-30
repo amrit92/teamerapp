@@ -64,8 +64,11 @@
 		</div>
 		<br>
 		<div class="btn btn-success btn-small" style="text-align:center;"> 
-			<%= link_to "Join now!", signup_path, :class => "signup_button round", :style => 'font-size:20px; text-decoration:none;' %> 
+			
+			
+			<%= link_to "Join now!", signup_path, :class => (ab_test :signup_link)  %> <!-- , style: bigger %>  -->
+			
 		</div>
-		<br></br><br>
+		<br><br><br>
 	</div>
 <% end %>
