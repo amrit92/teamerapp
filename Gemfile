@@ -8,7 +8,11 @@ gem 'rails', '3.2.13'
 
 
 
-gem "vanity"
+#gem "vanity", :git => 'git://github.com/vishnu-chronus/vanity'
+gem "vanity", :path => 'vanity'
+#gem "vanity", :git => 'git@github.com:apartmentlist/vanity.git', :ref => '2521048fdf3662d6a4a95a42f5a2867bf2d2b9d2'
+
+gem 'garb', :git => 'git://github.com/Sija/garb.git'
 
 #gem "redis"
 

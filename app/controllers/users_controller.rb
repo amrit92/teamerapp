@@ -28,6 +28,7 @@ def create
   @user = User.new(params[:user])
   if @user.save
     track! :signup      # track successful sign up
+    track! :test_second_metric #, @user.follows
     sign_in @user
 
     redirect_to @user

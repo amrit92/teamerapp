@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130528084722) do
+ActiveRecord::Schema.define(:version => 20130613084146) do
 
   create_table "events", :force => true do |t|
     t.integer  "user_id"
@@ -100,9 +100,19 @@ ActiveRecord::Schema.define(:version => 20130528084722) do
     t.integer  "outcome"
     t.datetime "created_at"
     t.datetime "completed_at"
+    t.boolean  "enabled"
   end
 
   add_index "vanity_experiments", ["experiment_id"], :name => "index_vanity_experiments_on_experiment_id"
+
+  create_table "vanity_metric_counts", :force => true do |t|
+    t.integer "vanity_experiment_id"
+    t.integer "alternative"
+    t.string  "metric"
+    t.integer "count"
+  end
+
+  add_index "vanity_metric_counts", ["vanity_experiment_id", "alternative", "metric"], :name => "by_experiment_id_and_alternative_and_metric"
 
   create_table "vanity_metric_values", :force => true do |t|
     t.integer "vanity_metric_id"
